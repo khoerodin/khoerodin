@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": { },
+  "devDependencies": {
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.1"
-  },
-  "devDependencies": {
+    "gulp-uglify": "^2.0.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat-css": "^2.3.0"
