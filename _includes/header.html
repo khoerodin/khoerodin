@@ -1,15 +1,14 @@
+{% if page.url == "/" %}
+<header class="site-header" style="border-bottom-color: transparent;">
+{% else %}
 <header class="site-header">
+{% endif %}
 
   <div class="wrapper">
-    <div class="logowrapper">
-    
-  		<a href="/">
-        <div class="logo-text logo-text-gray">KHOE</div>
-        <div class="logo-text logo-text-orange">RODIN</div>
-      </a>
-      
-  		<div class="clear-both"></div>
-    </div>
+
+		<a href="{{ site.url }}">
+      <div class="logo-text logo-text-gray">khoe</div><div class="logo-text logo-text-orange">rodin</div>
+    </a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -21,8 +20,7 @@
       </a>
 
       <div class="trigger">
-        <a class="page-link" href="/about">About</a>
-        <a class="page-link" href="/tag">Tags</a>
+        <a href="{{ site.url }}/about" class="page-link button" title="About">About</a>
       </div>
     </nav>
 

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="series-wrapper">
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      {% assign col = site.collections | where: "label", page.collection | first %}
+    	<h2 class="collection-title"><a href="{{ site.url }}/{{ page.collection }}" title="Menuju halaman seri {{ col.title }}">{{ col.title }}:</a></h2>
+      <h1 class="post-title" itemprop="name headline">{{ page.clear_title }}</h1>
+      <span class="post-meta">{% include post_meta.html %}</span>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      {{content}}
+    </div>
+
+  </article>
+
+  {% if site.disqus_shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</div>
+{% include sidebar.html %}
+{% include mobile_menu.html %}
+
+<script type="text/javascript">
+  var window_width = $(window).width();
+  if(window_width < 800 ){
+    $('.series-wrapper').removeClass('series-wrapper');
+  }
+</script>

@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<div class="home">
+	<form action="/search" method="get">
+		<section class="search-area home-search-area">			
+			<input type="text" name="q" class="search-box home-search-box" placeholder="APA YANG AKAN DIPELAJARI?" id="search-box">
+		</section>
+	</form>
+
+	<section class="skills">
+
+		<div class="skill-card">
+			<a href="{{ site.url }}/skill/tooling" class="skill-home-link">
+		    <div class="skill-info">
+				<div class="home-skill">TOOLING</div>
+
+				{% assign tooling_series = site.collections | where: "skill", "tooling" %}
+				{% assign all_tooling_episode = 0 %}
+				{% for series in tooling_series %}
+					{% assign episodes = site.[series.label] %}
+					{% assign episodes_size = episodes | size %}
+					{% capture all_tooling_episode %}{{ all_tooling_episode | plus: episodes_size }}{% endcapture %}
+				{% endfor %}
+
+				<div><span class="series-count text-primary">{{ tooling_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_tooling_episode }}</span> Episode</div>
+			</div>
+			</a>
+	  	</div>
+
+	  	<div class="skill-card">
+	  		<a href="{{ site.url }}/skill/layouting" class="skill-home-link">
+		    <div class="skill-info">
+				<div class="home-skill">LAYOUTING</div>
+
+				{% assign layouting_series = site.collections | where: "skill", "layouting" %}
+				{% assign all_layouting_episode = 0 %}
+				{% for series in layouting_series %}
+					{% assign episodes = site.[series.label] %}
+					{% assign episodes_size = episodes | size %}
+					{% capture all_layouting_episode %}{{ all_layouting_episode | plus: episodes_size }}{% endcapture %}
+				{% endfor %}
+
+				<div><span class="series-count text-primary">{{ layouting_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_layouting_episode }}</span> Episode</div>
+			</div>
+			</a>
+	  	</div>
+
+	  	<div class="skill-card">
+	  		<a href="{{ site.url }}/skill/javascript" class="skill-home-link">
+		    <div class="skill-info">
+				<div class="home-skill">JAVASCRIPT</div>
+
+				{% assign javascript_series = site.collections | where: "skill", "javascript" %}
+				{% assign all_javascript_episode = 0 %}
+				{% for series in javascript_series %}
+					{% assign episodes = site.[series.label] %}
+					{% assign episodes_size = episodes | size %}
+					{% capture all_javascript_episode %}{{ all_javascript_episode | plus: episodes_size }}{% endcapture %}
+				{% endfor %}
+
+				<div><span class="series-count text-primary">{{ javascript_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_javascript_episode }}</span> Episode</div>
+			</div>
+			</a>
+	  	</div>
+
+		<div class="skill-card">
+			<a href="{{ site.url }}/skill/php" class="skill-home-link">
+		    <div class="skill-info">
+				<div class="home-skill">PHP</div>
+				{% comment %}
+				ambil post 
+				dalam collection (yg selanjutnya dinamakan series)
+				yang skill php
+				{% endcomment %}
+				{% assign php_series = site.collections | where: "skill", "php" %}
+				
+				{% assign all_php_episode = 0 %}
+				
+				{% comment %}
+				keluarkan collection (series)
+				{% endcomment %}
+				{% for series in php_series %}
+					{% comment %}
+					ambil jml post dalam series
+					{% endcomment %}
+					{% assign episodes = site.[series.label] %}
+					{% assign episodes_size = episodes | size %}
+
+					{% comment %}
+					tambahkan all_php_episode
+					{% endcomment %}
+					{% capture all_php_episode %}{{ all_php_episode | plus: episodes_size }}{% endcapture %}
+				{% endfor %}
+				
+				<div><span class="series-count text-primary">{{ php_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_php_episode }}</span> Episode</div>
+			</div>
+			</a>
+		</div>
+
+	</section>
+</div>

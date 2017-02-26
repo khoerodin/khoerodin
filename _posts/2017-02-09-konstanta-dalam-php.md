@@ -3,7 +3,9 @@ title: "Konstanta dalam PHP"
 date: '2017-02-09 14:12:00'
 description: Konstanta adalah suatu lokasi penyimpanan (dalam memory) yang berisikan nilai yang sifatnya tetap dan tidak bisa diubah sepanjang program berjalan.
 tags:
-- PHP
+    - BelajarOOPPHP
+categories: 
+    - "Object-Oriented PHP"
 published: true
 ---
 

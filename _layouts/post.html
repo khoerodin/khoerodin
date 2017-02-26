@@ -1,69 +1,59 @@
 ---
 layout: default
-disqus: true
-readmore: true
+comments: true
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta">
-      {% if page.updated_date %}
-      Diperbarui: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated_date.html date=page.updated_date format=site.date_format lang="id" %}</time>
-      {% else %}
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated_date.html date=page.date format=site.date_format lang="id" %}</time>
-      {% endif %}
-      •
-      {% assign words = content | number_of_words %}
-      {% if words < 360 %}
-        Kurang dari 1 menit
-      {% else %}
-        {{ words | divided_by:180 }} menit
-      {% endif %}    
+    <span class="post-meta">{% include post_meta.html %}</span>
   </header>
 
   <div class="post-content" itemprop="articleBody">
     {{content}}
   </div>
-  
+
   <h3>Hashtags</h3>
+  
   <p>
   {% for tag in page.tags %}
     <a href="/tag#{{ tag }}">#{{ tag }}</a>
   {% endfor %}
   </p>
 
-  <div class="related-posts">    
+  <div class="related-posts">
     <div id="related-posts">
 {% assign hasSimilar = '' %}
 {% for post in site.related_posts %}
-    {% assign postHasSimilar = false %}
+  {% assign postHasSimilar = false %}
     {% for tag in post.tags %}
-        {% for thisTag in page.tags %}
-            {% if postHasSimilar == false and hasSimilar.size < 7 and post != page and tag == thisTag %}
-                {% if hasSimilar.size == 0 %}     
-      <h3>Related posts</h3>
-        <ul>
-                {% endif %}
-          <li>
-            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
-              {% if post.series %}
-                  (Series: {{ post.series }})
+      {% for thisTag in page.tags %}
+        {% if postHasSimilar == false and hasSimilar.size < 7 and post != page and tag == thisTag %}
+          {% if hasSimilar.size == 0 %}
+    <h3>Related posts</h3>
+      <ul>
               {% endif %}
-            </a>
-          </li>       
-                {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
-                {% assign postHasSimilar = true %}
+        <li>
+          <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
+            {% if post.series %}
+                (Series: {{ post.series }})
             {% endif %}
-        {% endfor %}
+          </a>
+        </li>
+          {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+        {% assign postHasSimilar = true %}
+      {% endif %}
     {% endfor %}
+  {% endfor %}
 {% endfor %}
 {% if hasSimilar.size > 0 %}
         </ul>
 {% endif %}
       </div>
-  </div>  
+  </div>
 
 </article>
 
-{% include disqus.html %}
+{% if site.disqus_shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

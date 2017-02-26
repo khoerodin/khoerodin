@@ -1,0 +1,41 @@
+<div class="sidebar">
+	{% if page.permalink %}
+		{% assign label = page.permalink | replace: '/', '' %} 
+		{% assign col = site.collections | where: "label", label | first %}
+		{% assign title = 'Episode' %}
+	{% else %}
+		{% assign col = site.collections | where: "label", page.collection | first %}
+		{% assign title = col.title %}
+	{% endif %}
+
+	<h2 class="sidebar-title">
+		{% if page.permalink %}
+			<span>{{ title }}</span>
+		{% else %}
+			<a href="{{ site.url }}/{{ col.label }}" title="Menuju halaman seri {{ title }}">{{ title }}</a>
+		{% endif %}		
+	</h2>
+
+	<div class="episodes">
+		{% assign collections = site.[col.label] %}
+		<ol class="sidebar-list-header">
+		{% for episode in collections %}
+			{% assign seq = forloop.index + 1 %}
+			{% if seq <= 9 %}
+				{% assign seq = '0' | append: seq %}
+			{% else %}
+				{% assign seq = seq %}
+			{% endif %}
+
+			{% if page.url == episode.url %}
+				{% assign active = ' class="active"' %}
+			{% else %}
+				{% assign active = '' %}
+			{% endif %}
+			<li class="sidebar-list">
+				<a href="{{ site.url }}{{ episode.url}}"{{ active }}>{{ episode.clear_title }}</a>
+			</li>
+		{% endfor %}
+		</ol>
+	</div>
+</div>

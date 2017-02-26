@@ -1,9 +1,22 @@
-title               : Khoerodin
-description         : Bismillah, Berkah, Manfaat
+title               : 'Khoerodin'
+description         : 'I am a Web Developer over 3 years of experience with web technologies. I enjoy thinking about UX as much as solving difficult technical problems.'
+short_description   : 'Web Developer, Writer and Maker'
+lang                : id
+email               : khoerodin@live.com
+author              :
+  khoerodin         :
+    twitter         : khoerodin
+    facebook        : khoerodin
+
+twitter             : khoerodin
+facebook            : khoerodin
+linkedin            : khoerodin
+
+google_analytics    : 'UA-91739383-1'
+disqus              : 'khoerodin'
 
 markdown            : kramdown
 highlighter         : rouge
-
 # https://github.com/jekyll/jekyll/issues/4619
 kramdown:
   # use Github Flavored Markdown
@@ -11,47 +24,37 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     disable: true
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
   # do not replace newlines by <br>s
   hard_wrap: false
 
-paginate            : 5
-paginate_path       : /page/:num
-baseurl             : 
-domain_name         : 'https://khoerodin.id'
+paging_limit        : 5
+
 # https://github.com/oncleben31/jekyll-date-basic-i18n
 date_format         : '%-d %B %Y'
-google_analytics    : '#'
-disqus_shortname    : 'khoerodin'
-twitter             :
-  username: khoerodin
 
 # Details for the RSS feed generator
 url                 : 'https://khoerodin.id'
-author              : 'Khoerodin'
-
 permalink           : :title/
+
+collections:
+  object-oriented-php:
+    output: true
+    permalink: /object-oriented-php/:path/
+    label: 'object-oriented-php' # dipake di home, dan skill page
+    title: 'Object-Oriented PHP' # dipake di home, dan skill page
+    skill: php #dipake di home, dan skill page
+    level: intermediate #dipake di skill page
 
 defaults:
     -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
+      scope:
+        path: ""
+        type: pages
+      values:
+        layout: default
     -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-
-gems:  
-  - jemoji
-  - jekyll-paginate
-  - jekyll-seo-tag
+      scope:
+        path: ""
+        type: posts
+      values:
+        layout: post

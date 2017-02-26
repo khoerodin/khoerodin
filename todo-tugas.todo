@@ -1,0 +1,40 @@
+ Khoerodin.ID
+ Utamakan apa yang visitor inginkan (yaitu ilmu gratis),
+   bukan berapa $ yang ingin aku peroleh
+   sedikit saja ambil keuntungan, utamakan banyak visitor dahulu
+ Series dasar-dasar ilmu website, disertai kasus real dalam dunia web
+   HTML
+   CSS
+   PHP
+   Javascript
+ Series pembuatan proyek, sederhana tapi jarang yang membuat
+ Sebisa-selengkap mungkin
+ Free
+ Sebisa mungkin hindari penggunaan gambar, kecuali emang harus
+ Jual ebook ditambah contoh kasus rumit
+
+ ☐ create add to bitbucket
+ ✔ add searching tool @done (17-02-24 11:27)
+ ✔ skill page @done (17-02-26 13:30)
+ ☐ search box position on small device
+ ☐ fixed footer
+ ✔ gimana caranya agar di collection page tidak usah pake label @done (17-02-24 14:12)
+ ☐ seragamkan css responsive breakpoint
+ ☐ gulp
+ ☐ add newsletter
+ ☐ create tag (versioning) before replace theme
+ ☐ add redirect from old design
+ ☐ cek untuk apa itemscope dalam tag artikel
+ ☐ asset sebaiknya dimana sih?
+ ☐ _config.yml di rapihkan, mana yang ngga perlu?, pake '' atau ngga? from matter juga tuh
+ ✔ home content @done (17-02-23 20:49)
+ ✔ hide sidebar on mobile when scrolldown @done (17-02-21 17:37)
+ ✔ episode menu for mobile @done (17-02-22 12:30)
+ ✔ separate html tag for series and non series @done (17-02-21 18:00)
+ ✔ ipad pro sidebar not showing @done (17-02-22 15:04)
+ ✔ generate xml for collections @done (17-02-22 16:38)
+ ✔ when have many episode like 30? @done (17-02-22 09:04)
+ ✔ remove reading time or not? - not @done (17-02-21 21:20)
+ ✔ create seo tag manually, without plugin @done (17-02-21 21:11)
+ ✔ minimalisasi js on-page, kalo bisa pake liquid aja @done (17-02-23 20:50)
+ ✔ sidebar scrol on firefox is slow @done (17-02-23 20:49)
