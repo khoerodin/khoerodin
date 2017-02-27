@@ -5,6 +5,8 @@ date: '2017-02-12 08:06:00'
 description: Konstanta Class atau Class Constants adalah konstanta yang didefinisikan di dalam sebuah class. Sebagaimana konstanta regular konstanta class juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan.
 layout: episode
 published: true
+redirect_from:
+  - /konstanta-class-dalam-oop-php/
 ---
 
 Konstanta Class atau **_Class Constants_** adalah konstanta yang didefinisikan di dalam sebuah *class*. Sebagaimana <a href="{{ site.url }}/konstanta-dalam-php/" target="_blank" title="konstanta regular">konstanta *regular*</a> konstanta *class* juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan. Nilai atau *value* dari konstanta harus berupa ekspresi *konstan* atau ekspresi tetap yaitu bukan merupakan *variable*, *property* atau *function* dan lain-lain.

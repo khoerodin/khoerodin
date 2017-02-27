@@ -5,6 +5,8 @@ date: '2017-02-14 23:02:00'
 description: Abstract class adalah class yang mengandung minimal satu buah abstract method, yaitu method yang hanya berupa nama method dan parameternya (jika ada) dan diawali dengan keyword abstract.
 layout: episode
 published: true
+redirect_from:
+  - /abstract-class-dan-abstract-method-dalam-oop-php/
 ---
 
 _Abstract class_ adalah _class_ yang mengandung minimal satu buah _abstract method_, yaitu _method_ yang hanya berupa nama _method_ dan parameternya (jika ada) dan diawali dengan _keyword_ `abstract`. Ketika sebuah _class_ dibuat dengan cara menurunkan atau _class inheritance_ dari _abstract class_ maka semua method yang didefinisikan sebagai _abstract_ oleh _parent class_ harus diimplementasikan ulang oleh _class_ tersebut yang sebagai child class atau class turunan dari _abstract class_.

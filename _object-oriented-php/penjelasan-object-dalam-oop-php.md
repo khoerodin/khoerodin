@@ -2,10 +2,11 @@
 title: "Penjelasan Object dalam OOP PHP"
 clear_title: "Object"
 date: '2017-02-10 15:30:00'
-updated_date: '2017-02-26 15:23:00'
 description: Object adalah hasil konkrit atau hasil cetakan dari sebuah class. Sebagai contoh pada artikel sebelumnya saya telah membuat class User maka object-nya adalah para User atau account
 layout: episode
 published: true
+redirect_from:
+  - /penjelasan-object-dalam-oop-php/
 ---
 
 **_Object_** adalah hasil konkrit atau *hasil cetakan* dari sebuah **class**. Sebagai contoh pada artikel sebelumnya saya telah membuat *class* `User` maka *object*-nya adalah para *User* atau *accounts*, misalnya *Khoerodin*, *Andi* dan *Bagus*.

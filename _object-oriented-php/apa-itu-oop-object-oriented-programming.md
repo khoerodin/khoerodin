@@ -6,6 +6,8 @@ description: >-
   Apa itu OOP? bagaimana mempelajari OOP dalam PHP bagaimana dan membuat website dengan konsep OOP PHP?. OOP merupakan paradigma pemrograman yang berorientasikan kepada objek. Semua data dan fungsi di dalam paradigma ini dibungkus dalam kelas-kelas atau objek-objek. Bandingkan dengan logika pemrograman terstruktur. Setiap objek dapat menerima pesan, memproses data, dan mengirim pesan ke objek lainnya
 layout: episode
 published: true
+redirect_from:
+  - /apa-itu-oop-object-oriented-programming/
 ---
 
 Kali ini saya akan menulis tentang OOP *(Object Oriented Programming)*, dan dalam tulisan-tulisan selanjutnya akan lebih spesifik ke OOP dalam PHP atau **Object-Oriented PHP**. Konsep OOP merupakan konsep yang harus difahami jika kita ingin **lebih cepat** dan **rapih** dalam men-*develop* sebuah aplikasi.

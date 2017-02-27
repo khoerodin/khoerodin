@@ -5,6 +5,8 @@ date: '2017-02-14 09:38:00'
 description: Dalam bahasa yang sangat sederhana $this digunakan untuk mereferensikan property atau method yang berada dalam current object. Sedangkan self digunakan untuk mereferensikan property atau method yang berada dalam current class.
 layout: episode
 published: true
+redirect_from:
+  - /self-dan-this-apa-perbedaanya-dalam-oop-php/
 ---
 
 Dalam bahasa yang sangat sederhana `$this` digunakan untuk mereferensikan _property_ atau _method_ yang berada dalam _current object_. Sedangkan `self` digunakan untuk mereferensikan _property_ atau _method_ yang berada dalam _current class_.

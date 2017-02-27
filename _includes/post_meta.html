@@ -1,26 +1,19 @@
 {% if post %}
   {% assign post = post %}
-  {% assign date_tag = 0 %}
 {% else %}
   {% assign post = page %}
-  {% assign date_tag = 1 %}
 {% endif %}
 
-{% if post.updated_date %}
+{% assign created_date = post.date | date_to_string %}
+{% assign modified_date = post.last_modified_at | date_to_string %}
+
+{% if created_date != modified_date %}
 	Diperbarui:
-	<time
-		{% if date_tag == 1 %} 
-			datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"
-		{% endif %}
-	>
-		{% include translated_date.html date=post.updated_date format=site.date_format lang="id" %}
+	<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+		{% include translated_date.html date=post.last_modified_at format=site.date_format lang="id" %}
 	</time>
 {% else %}
-	<time
-		{% if date_tag == 1 %}
-			datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"
-		{% endif %}
-	>
+	<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
 	{% include translated_date.html date=post.date format=site.date_format lang="id" %}
 	</time>
 {% endif %}

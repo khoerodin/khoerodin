@@ -1,4 +1,3 @@
 source 'https://rubygems.org'
-gem 'github-pages'
-gem "jekyll-assets"
-gem "uglifier"
+gem 'jekyll-redirect-from'
+gem 'jekyll-last-modified-at'

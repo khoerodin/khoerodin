@@ -18,16 +18,22 @@ permalink: /search/
 </article>
 
 <script>
+  {% assign oop_php = site.object-oriented-php  %}
+  {% assign series = site.pages | where: "layout", "series" %}
+  {% assign episodes = site.pages | where: "layout", "episode" %}
+  {% assign skills = site.pages | where: "layout", "skill" %}
+  {% assign posts = oop_php | concat: series | concat: episodes | concat: skills %}
   window.store = {
-    {% for post in site.posts %}
+    {% for post in posts %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "author": "{{ post.author | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "content": {{ post.content | strip_html | markdownify | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
 </script>
+<script src="/assets/js/search.min.js"></script>

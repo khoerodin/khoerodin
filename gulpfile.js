@@ -8,7 +8,7 @@ const autoprefixer 	= require('gulp-autoprefixer');
 const cleanCss 		= require('gulp-clean-css');
 const concatCss 	= require('gulp-concat-css');
 
-gulp.task('top_scripts', function() {  
+gulp.task('scripts', function() {  
     return gulp.src(
     		[
     			'_assets/js/jquery.min.js',
@@ -28,14 +28,14 @@ gulp.task('top_scripts', function() {
         .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('bottom_scripts', function() {  
+gulp.task('search', function() {  
     return gulp.src(
     		[
     			'_assets/js/lunr.min.js',
     			'_assets/js/search.js',
     		])
         .pipe(uglify())
-        .pipe(concat('bottom_scripts.min.js'))
+        .pipe(concat('search.min.js'))
         .pipe(gulp.dest('assets/js'));
 });
 
