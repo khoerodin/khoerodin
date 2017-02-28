@@ -6,7 +6,7 @@ permalink: /search/
 <article class="post">
 
   <header class="post-header">
-    <form action="/search" method="get">
+    <form action="{{ site.url }}/search" method="get">
       <section class="search-area">      
         <input type="text" name="q" class="search-box page-search-box" placeholder="APA YANG AKAN DIPELAJARI?" id="search-box">
       </section>
