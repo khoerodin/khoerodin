@@ -18,12 +18,14 @@ layout: default
 
   </article>
 
-  {% if site.disqus_shortname %}
+  {% include mobile_menu.html %}
+  {% if site.disqus %}
     {% include disqus_comments.html %}
   {% endif %}
+
 </div>
+
 {% include sidebar.html %}
-{% include mobile_menu.html %}
 
 <script type="text/javascript">
   var window_width = $(window).width();
