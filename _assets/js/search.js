@@ -39,10 +39,10 @@
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
       this.field('id');
-      this.field('title', { boost: 10 });
+      this.field('title');
       this.field('author');
       this.field('category');
-      this.field('content');
+      this.field('content', { boost: 10 });
     });
 
     for (var key in window.store) { // Add the data to lunr
