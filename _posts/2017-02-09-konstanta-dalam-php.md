@@ -7,8 +7,6 @@ tags:
 categories: 
     - "Object-Oriented PHP"
 published: true
-redirect_to:
-  - https://khoerodin.id/konstanta-dalam-php/
 ---
 
 Dalam artikel ini kita akan belajar tentang konstanta. Dalam <a href="https://en.wikipedia.org/wiki/Constant_(computer_programming)" target="_blank">Wikipedia</a> dijelaskan Konstanta *(constant)* adalah suatu lokasi penyimpanan (dalam *memory*) yang berisikan nilai yang sifatnya tetap dan tidak bisa diubah sepanjang program berjalan. 

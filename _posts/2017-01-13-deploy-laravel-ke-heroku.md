@@ -8,8 +8,6 @@ tags:
   - heroku
   - PaaS
 published: true
-redirect_to:
-  - https://khoerodin.id/deploy-laravel-ke-heroku/
 ---
 
 **Heroku** merupakan _layanan cloud computing_ bertype <a href="https://rizkimufrizal.github.io/heroku-sebagai-komputasi-modern/" target="_blank">PaaS</a> _(Platform as a Service)_. Bagi para *web developer* lumayan lah versi gratisnya kalau hanya untuk sekedar *demo* aplikasi/*website* yang sedang dibangun.

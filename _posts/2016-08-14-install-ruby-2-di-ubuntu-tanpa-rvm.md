@@ -9,8 +9,6 @@ tags:
   - package
   - brightbox
 published: true
-redirect_to:
-  - https://khoerodin.id/install-ruby-2-di-ubuntu-tanpa-rvm/
 ---
 
 Ada banyak cara install Ruby versi 2.* di Ubuntu, salah satunya ialah menggunakan [RVM](https://rvm.io/ "RVM"), namun jika merasa ribet dengan RVM kita bisa mencoba menggunakan *Ruby Packages* dari [Brightbox](https://www.brightbox.com/docs/ruby/ubuntu/ "Brightbox").

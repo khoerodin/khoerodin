@@ -8,8 +8,6 @@ tags:
   - laravel
   - middleware
 published: true
-redirect_to:
-  - https://khoerodin.id/memahami-middleware-dalam-laravel/
 ---
 
 *Middleware* Laravel adalah penengah antara *request* yang masuk dengan *controller* yang dituju yang berpengaruh pada *request* dan *respons*. Misalnya kita ingin memverifikasi setiap *request* yang masuk seperti melakukan pengecekan status *login, privillage, CSRF (Cross-Site Request Forgery)* atau yang lainnya.
