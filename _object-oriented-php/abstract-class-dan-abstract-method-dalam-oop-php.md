@@ -9,7 +9,9 @@ redirect_from:
   - /abstract-class-dan-abstract-method-dalam-oop-php/
 ---
 
-_Abstract class_ adalah _class_ yang mengandung minimal satu buah _abstract method_, yaitu _method_ yang hanya berupa nama _method_ dan parameternya (jika ada) dan diawali dengan _keyword_ `abstract`. Ketika sebuah _class_ dibuat dengan cara menurunkan atau _class inheritance_ dari _abstract class_ maka semua method yang didefinisikan sebagai _abstract_ oleh _parent class_ harus diimplementasikan ulang oleh _class_ tersebut yang sebagai child class atau class turunan dari _abstract class_.
+_Abstract class_ adalah _class_ yang mengandung minimal satu buah _abstract method_, yaitu _method_ yang hanya berupa nama _method_ dan parameternya (jika ada) dan diawali dengan _keyword_ `abstract`. 
+
+Ketika sebuah _class_ dibuat dengan cara menurunkan atau _class inheritance_ dari _abstract class_ maka semua method yang didefinisikan sebagai _abstract_ oleh _parent class_ harus diimplementasikan ulang oleh _class_ tersebut yang sebagai child class atau class turunan dari _abstract class_.
 
 Sebagai contoh kita akan membuat banyak level akses _User_ dalam sebuah website berita, ada yang sebagai _Admin_, _Editor_ dan _Reporter_. Dalam kasus tersebut yang pertama kita buat adalah membuat _parent class_ atau _class_ induk yang diberi nama `User`. _Class_ `User` tersebut nantinya akan diturunkan kepada _class_ `Admin`, `Editor` dan `Reporter`. Pada setiap _child class_ kita tentukan harus ada _method_ yang sama yang harus dimiliki, misal _method_ `showName()`. Jadi **setiap class turunan harus memiliki method `showName()`**. Untuk **memaksakan** kehendak tersebut maka dalam _parent class_ (_abstract class_) dibuatlah _abstract method_ `showName()`.
 
