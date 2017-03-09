@@ -1,6 +1,6 @@
 ---
 title: "Konstanta Class dalam OOP PHP"
-clear_title: "Konstanta Class"
+clean_title: "Konstanta Class"
 date: '2017-02-12 08:06:00'
 description: Konstanta Class atau Class Constants adalah konstanta yang didefinisikan di dalam sebuah class. Sebagaimana konstanta regular konstanta class juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan.
 layout: episode
@@ -9,7 +9,7 @@ redirect_from:
   - /konstanta-class-dalam-oop-php/
 ---
 
-Konstanta Class atau **_Class Constants_** adalah konstanta yang didefinisikan di dalam sebuah *class*. Sebagaimana <a href="{{ site.url }}/konstanta-dalam-php/" target="_blank" title="konstanta regular">konstanta *regular*</a> konstanta *class* juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan. Nilai atau *value* dari konstanta harus berupa ekspresi *konstan* atau ekspresi tetap yaitu bukan merupakan *variable*, *property* atau *function* dan lain-lain.
+Konstanta *Class* atau <mark><em>Class Constants</em></mark> adalah konstanta yang didefinisikan di dalam sebuah *class*. Sebagaimana <a href="{{ site.url }}/others/konstanta-dalam-php/" target="_blank">konstanta *regular*</a> konstanta *class* juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan. Nilai atau *value* dari konstanta harus berupa ekspresi *konstan* atau ekspresi tetap yaitu bukan merupakan *variable*, *property* atau *function* dan lain-lain.
 
 ### Mendefinisikan Konstanta Class
 Mendefinisikan Konstanta *Class* yaitu diawali dengan menggunakan *keyword* `const`. Berikut contoh konstanta dalam sebuah *class*
@@ -21,10 +21,10 @@ class User
 }
 ```
 
-Agar lebih mudah membedakan antara *variable* dengan konstanta, konstanta biasanya ditulis menggunakan huruf kapital.
+<mark>Agar lebih mudah membedakan antara <em>variable</em> dengan konstanta, konstanta biasanya ditulis menggunakan huruf kapital.</mark>
 
 ### Cara Akses atau Menggunakan Konstanta Class
-**1. Akses dari dalam Class itu sendiri**
+#### 1. Akses dari dalam Class itu sendiri
 
 Caranya yaitu dengan menggunakan *keyword* `self` diikuti dengan titik dua ganda *(double colon)* dan konstanta.
 
@@ -39,7 +39,7 @@ class User
 }
 ```
 
-**2. Akses dari luar Class**
+#### 2. Akses dari luar Class
 
 Menggunakan nama *class*, *double colon* dan konstanta.
 
@@ -52,7 +52,7 @@ class User
 echo User::JK;
 ```
 
-**3. Akses dari object**
+#### 3. Akses dari object
 
 Caranya yaitu menggunakan *object*, *double colon* dan konstanta.  
 
@@ -66,7 +66,7 @@ $objek = new User();
 echo $objek::JK; // Mulai PHP 5.3.0
 ```
 
-**3. Akses dari variable yang ber-value nama sebuah class**
+#### 3. Akses dari variable yang ber-*value* nama sebuah class
 
 Nama *class* terlebih dahulu dijadikan *variable value*. Tapi perlu diperhatikan bahwa *variable value* tidak boleh berupa *keyword* seperti `self`, `parent` and `static`.
 
@@ -79,7 +79,7 @@ $classname = "User";
 echo $classname::JK; // Mulai PHP 5.3.0
 ```
 
-### Tambahan
+#### Tambahan
 Mulai PHP 5.6.0 Konstanta *Class* juga dapat ber-*value* dari konstanta *regular*.
 
 ```php
@@ -93,7 +93,7 @@ class User {
 }
 ```
 
-Mulai PHP 7.1.0 **_Visibility Modifier_** juga bisa ditambahkan ke Konstanta *Class*.
+Mulai PHP 7.1.0 <mark><em>Visibility Modifier</em></mark> juga bisa ditambahkan ke Konstanta *Class*.
 
 ```php
 class User {
@@ -107,4 +107,4 @@ echo User::PENDIDIKAN;
 
 Jika kode diatas dijalankan pasti akan error, karena `const PENDIDIKAN` adalah `private`.
 
-Apa sih *Visibility Modifier* ? akan dijelaskan kok dalam artikel tersendiri tentang **_encapsulation_** atau **_visibility_**, mungkin kali ini bisa diabaikan tentang *Visibility Modifier*.
+Apa sih *Visibility Modifier* ? akan dijelaskan kok dalam artikel tersendiri tentang <mark><em>encapsulation</em></mark> atau <mark><em>visibility</em></mark>, mungkin kali ini bisa diabaikan tentang *Visibility Modifier*.

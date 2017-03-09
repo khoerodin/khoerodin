@@ -1,0 +1,29 @@
+{% if page.comments != false and site.disqus and jekyll.environment == "production" %}
+<script>
+	window.onscroll = function(e) {
+    if ((window.innerHeight + window.scrollY) 
+        >= document.body.offsetHeight) 
+    {
+        if (!disqus_loaded) disqus(); 
+    }
+	};
+
+	var disqus_loaded = false;
+	function disqus() {
+
+	  if (!disqus_loaded)  {
+	    disqus_loaded = true;    
+	    var disqus_shortname = '{{ site.disqus }}';
+	    var disqus_developer = 0;
+	    (function() {
+	      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	      dsq.src = 'https://'+disqus_shortname+'.disqus.com/embed.js';
+	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	  }
+	  
+	}
+</script>
+<div id="disqus_thread"></div>
+<noscript>Mohon aktifkan JavaScript untuk melihat <a href="https://disqus.com/?ref_noscript">komentar.</a></noscript>
+{% endif %}

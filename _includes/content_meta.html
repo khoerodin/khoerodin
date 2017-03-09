@@ -1,0 +1,26 @@
+{% if post %}
+  {% assign post = post %}
+{% else %}
+  {% assign post = page %}
+{% endif %}
+
+{% assign created_date = post.date | date_to_string %}
+{% assign modified_date = post.last_modified_at | date_to_string %}
+
+{% if created_date != modified_date %}
+	Diperbarui:
+	<time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+		{% include translated_date.html date=post.last_modified_at format="%-d %b %Y" lang="id" %}
+	</time>
+{% else %}
+	<time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+	{% include translated_date.html date=post.date format="%-d %b %Y" lang="id" %}
+	</time>
+{% endif %}
+<span class="dot-devider"></span>
+{% assign words = post.content | strip_html | number_of_words %}
+{% if words < 360 %}
+  -1 menit
+{% else %}
+  {{ words | divided_by:180 }}+ menit
+{% endif %}

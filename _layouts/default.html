@@ -6,21 +6,11 @@ layout: compress
 
   {% include head.html %}
 
-  <body>
-
-    {% include header.html %}
-	
-	{% if page.url == "/" %}
-    <div class="page-content">
-    {% else %}
-    <div class="page-content" style="min-height: 500px;">
-    {% endif %}
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
+  <body class="fade-in">
+    {{ content }}    
     {% include bottom_scripts.html %}
-</body>
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+		{% include google_analytics.html %}
+	{% endif %}
+  </body>
 </html>

@@ -1,14 +1,29 @@
 ---
 layout: default
 ---
-<article class="post">
+{% include logo_without_nav.html %}
+{% include floating_icons.html %}
 
-	<header class="post-header">
-	  <h1 class="post-title">{{ page.title | escape }}</h1>
-	</header>
+<div class="container container-l">  
+  
+  <div class="clear">
+    <div class="col-8-l push-2-l">      
+      <article class="episode" itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 itemprop="headline" class="title">{{ page.title }}</h1>
+        <div class="clear pad-top-20 pad-top-20 single-content">
+          {{ content }}
+        </div>
+      </article>
 
-	<div class="post-content">
-	  {{ content }}
-	</div>
+      <section class="comments">
+        {% include disqus.html %}
+      </section>
 
-</article>
+    </div>
+  </div>
+
+</div>
+
+<footer class="horizontal-menu pad-top-60">
+  {% include footer.html %}
+</footer>

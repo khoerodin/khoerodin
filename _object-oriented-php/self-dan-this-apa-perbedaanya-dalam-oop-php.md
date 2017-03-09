@@ -1,8 +1,8 @@
 ---
 title: "Self dan $this, Apa Perbedaanya dalam OOP PHP?"
-clear_title: "Self dan $this, Apa Perbedaanya?"
+clean_title: "Self dan $this, Apa Perbedaanya?"
 date: '2017-02-14 09:38:00'
-description: Dalam bahasa yang sangat sederhana $this digunakan untuk mereferensikan property atau method yang berada dalam current object. Sedangkan self digunakan untuk mereferensikan property atau method yang berada dalam current class.
+description: $this digunakan untuk mereferensikan property atau method yang berada dalam current object. Sedangkan self digunakan untuk mereferensikan property atau method yang berada dalam current class.
 layout: episode
 published: true
 redirect_from:
@@ -13,7 +13,7 @@ Dalam bahasa yang sangat sederhana `$this` digunakan untuk mereferensikan _prope
 
 Jika sudah faham artikel saya tentang <a href="{{ site.url }}/object-oriented-php/pewarisan-object-inheritance-dalam-oop-php/" target="_blank">pewarisan</a>, mari kita perhatikan dan praktekkan kode dibawah ini:
 
-**1. Penggunaan `$this`**
+### 1. Penggunaan `$this`
 
 ```php
 class Penulis {
@@ -45,9 +45,9 @@ Jika kita perhatikan, baik _class_ `Penulis` maupun _class_ `Programmer` sama-sa
 
 Pada baris bawah terdapat instansiai _object_ `$TukangKode` dari _class_ `Programmer`. Selanjutnya _object_ `$TukangKode` memanggil method `sayaAdalah()` yang berasal dari _class_ induk atau _parent class_. _Method_ `sayaAdalah()` memanggil method `saya()` menggunakan `$this` diikuti `->`.
 
-Karena menggunakan `$this` ini berarti yang dimaksud `saya()` **bukanlah** `saya()` yang berada dalam _parent class_ atau _class_ `Penulis` melainkan `saya()` yang berada dalam **_object_-nya sendiri** atau dalam _object_ `$TukangKode`, yaitu `saya()` yang berisi `echo "Saya programmer :)";`.
+Karena menggunakan `$this` ini berarti yang dimaksud `saya()` <mark>bukanlah</mark> `saya()` yang berada dalam _parent class_ atau _class_ `Penulis` melainkan `saya()` yang berada dalam <mark><em>object</em>-nya sendiri</mark> atau dalam _object_ `$TukangKode`, yaitu `saya()` yang berisi `echo "Saya programmer :)";`.
 
-**2. Penggunaan `self`**
+### 2. Penggunaan `self`
 
 ```php
 class Penulis {
@@ -77,6 +77,6 @@ Jika kode di atas dijalankan maka outputnya `Saya penulis :)`.
 
 Perbedaan kode program ini dengan kode program sebelumnya hanyalah pada method `sayaAdalah()`, dalam _method_ tersebut tidak lagi menggunakan `$this` ketika memanggil _method_ `saya()` melainkan menggunakan `self`.
 
-Karena menggunakan `self` ini berarti yang dimaksud `saya()` **bukanlah** `saya()` yang berada dalam **_object_-nya sendiri** atau dalam _object_ `$TukangKode` melainkan `saya()` yang berada dalam **_class_-nya sendiri** atau _class_ `Penulis` yang berisi `echo "Saya penulis :)";`.
+Karena menggunakan `self` ini berarti yang dimaksud `saya()` <mark>bukanlah</mark> `saya()` yang berada dalam <mark><em>object</em>-nya sendiri</mark> atau dalam _object_ `$TukangKode` melainkan `saya()` yang berada dalam <mark><em>class</em>-nya sendiri</mark> atau _class_ `Penulis` yang berisi `echo "Saya penulis :)";`.
 
-Mudah difahami kan? jika belum faham silakan berikan komentar :blush:. Kode program di atas hanyalah contoh sederhana, lain lagi jika kita dihadapkan dengan kasus-kasus yang lebih kompleks yang saya tulis dalam **ebook** saya.
+Mudah difahami kan? jika belum faham silakan berikan komentar :blush:. Kode program di atas hanyalah contoh sederhana, lain lagi jika kita dihadapkan dengan kasus-kasus yang lebih kompleks. Tunggu saja *update*-an episode ini..

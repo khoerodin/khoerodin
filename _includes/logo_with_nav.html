@@ -1,0 +1,34 @@
+<header>
+
+  <div class="container container-l">
+    <div class="clear pad-top-10 pad-bottom-7">
+      <div class="col-12-l">
+        <div class="header-logo pad-bottom-10">
+          <a href="{% if page.url == '/' %}javascript:void(0){% else %}{{ site.url }}{% endif %}" class="logo">khoe<span class="text-grey">rodin</span></a>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="horizontal-menu scroll">
+    <div class="container container-l">
+      <div class="clear pad-bottom-7">
+        <div class="col-12-l">
+
+          <nav class='vertical-align-middle'>
+            <span class='nav-item'><a 
+              class="{% if page.url == '/' %}active{% endif %}"
+              href="{% if page.url == '/' %}javascript:void(0){% else %}{{ site.url }}{% endif %}">Home</a>
+            </span>
+            <span class='nav-item'><a 
+              class="{% if page.url == '/object-oriented-php/' %}active{% endif %}" 
+              href="{% if page.url == '/object-oriented-php/' %}javascript:void(0){% else %}{{ site.url }}/object-oriented-php/{% endif %}">Object-Oriented PHP</a>
+            </span>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>

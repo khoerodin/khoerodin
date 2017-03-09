@@ -1,35 +1,14 @@
-{% if page.footer != false %}
-<footer class="site-footer">
-
-  <div class="wrapper">
-    <h2 class="footer-heading">© 2016-{{ site.time | date: '%Y' }} {{ site.title | escape }}</h2>
-    <div class="footer-col-wrapper">
-      
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.short_description %}
-              {{ site.short_description | escape }}
-            {% endif %}
-          </li>
-          {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-4">
-        <p>
-          {{ site.description | escape }}
-          {% if site.twitter %}
-          Follow me 
-          {% include icon_twitter.html username=site.twitter %}
-          {% endif %}
-        </p>
-      </div>
-
+<div class="container container-l">
+  <div class="clear">
+    <div class="col-12-l">
+      <div class="footer-menu pad-top-10 pad-bottom-20 scroll">
+        <nav class='vertical-align-middle'>
+          <span class='nav-item'>© 2016-{{ site.time | date: '%Y' }} {{ site.title | escape }}</span>
+          <span class='nav-item'><a class="{% if page.url == '/blog/index.html' %}active{% endif %}" href="{% if page.url == '/blog/index.html' %}javascript:(0){% else %}{{ site.url }}/blog/{% endif %}">Blog</a></span>
+          <span class='nav-item'><a class="{% if page.url == '/lisensi/' %}active{% endif %}" href="{% if page.url == '/lisensi/' %}javascript:(0){% else %}{{ site.url }}/lisensi/{% endif %}">Lisensi</a></span>
+          <span class='nav-item'><a class="{% if page.url == '/tentang/' %}active{% endif %}" href="{% if page.url == '/tentang/' %}javascript:(0){% else %}{{ site.url }}/tentang/{% endif %}">Tentang</a></span>
+        </nav>
+      </div>          
     </div>
   </div>
-
-</footer>
-{% endif %}
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "Class Autoloader dalam OOP PHP"
-clear_title: "Class Autoloader"
+clean_title: "Class Autoloader"
 date: '2017-02-12 21:00:00'
 description: Apa itu Autoloader Class dalam OOP PHP ? Umumnya pada pembuatan aplikasi berbasis Object Oriented Programming,  programmer membuat setiap class dalam satu file tersendiri dan jika akan menggunakannya programmer meng-include-kan satu per satu file class pada permulaan baris kode. Ini bukan masalah jika hanya melakukan include satu, dua atau lima file, tapi jika puluhan? ratusan bahkan lebih?
 layout: episode
@@ -15,10 +15,12 @@ Mulai PHP 5 masalah itu sudah bisa diatasi dengan mudah. Misal kita membuat sebu
 
 ```php
 class Name {
+
     function showName($name)
     {
     	echo 'Nama saya ' . $name . ' ';
     }
+
 }
 ```
 
@@ -26,10 +28,12 @@ Buat lagi _class_ yaitu _class_ `Address` dan disimpan dalam _file_ `Address.php
 
 ```php
 class Address {
+
     function showAddress($address)
     {
     	echo 'Alamat saya ' . $address;
     }
+    
 }
 ```
 

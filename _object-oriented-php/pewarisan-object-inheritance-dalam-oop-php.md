@@ -1,6 +1,6 @@
 ---
 title: "Pewarisan (Obejct Inheritance) dalam OOP PHP"
-clear_title: "Pewarisan (Obejct Inheritance)"
+clean_title: "Pewarisan (Obejct Inheritance)"
 date: '2017-02-13 10:08:00'
 description: Pewarisan atau inheritance dalam Object-Oriented PHP adalah mewariskan property dan method baik public maupun protected kepada class lain. Ingat ya, hanya public dan protected.
 layout: episode
@@ -13,7 +13,7 @@ Pewarisan atau _inheritance_ dalam _Object-Oriented PHP_ adalah mewariskan _prop
 
 Konsep pewarisan ini sangat berguna jika kita ingin membuat _class_ lagi yang memiliki fungsi mirip dengan _class_ yang sudah ada, sehingga tidak usah membuat lagi _method_ atau _property_ yang memiliki fungsi mirip atau sama. Dengan _inheritance_ kita bisa menghindari duplikasi kode program, atau disebut juga _code reuse_.
 
-Lebih jelasnya mari perhatikan dan praktekkan kode di bawah ini, keterangan langsung saya sematkan pada baris kode agar memudahkan. :blush:
+Lebih jelasnya mari perhatikan dan praktekkan kode program di bawah ini, keterangan langsung saya sematkan pada baris kode agar memudahkan. :blush:
 
 ```php
 class User
@@ -29,7 +29,7 @@ class User
     }
 }
 
-// membuat class baru
+// membuat lagi class baru
 // dengan extends class User
 // artinya mewarisi property dan method
 // dari class User
@@ -40,6 +40,7 @@ class Bio extends User
     public $brithdate = '01 Januari 2017';
 
     public function showBio(){
+        // menggunakan property dari class User
         echo "Username : $this->username <br/>";
         echo "Brithdate : $this->brithdate <br/>";
         echo "Gender : $this->gender <br/>";
@@ -65,7 +66,7 @@ $Bagus->username = 'tubagus';
 $Bagus->gender = 'Female';
 
 // memanggil property
-// kode ini berjalan
+// kode ini tidak error
 echo $Bagus->username . '<br/>';
 
 // Undefined property.
@@ -79,7 +80,7 @@ echo $Bagus->gender;
 echo $Bagus->brithdate . '<br/>';
 
 // memanggil method
-// kode ini berjalan
+// kode ini tidak error
 $Bagus->showSalam();
 $Bagus->showBio();
 
@@ -88,4 +89,4 @@ $Bagus->showBio();
 $Bagus->showAddress();
 ```
 
-Kita bisa lihat bahwa _class_ `Bio`(_object_ `$Bagus`) mewarisi (dapat mengkases) _property_ dan _method_ yang bersifat `public` dan `protected` dari _class_ `User`. Ada yang ditanyakan? jangan sungkan untuk berkomentar sambil ngopi-ngopi.. :smiley: :coffee:
+Kita bisa lihat bahwa _class_ `Bio` mewarisi (dapat mengkases) _property_ dan _method_ yang bersifat `public` dan `protected` dari _class_ `User`. Ada yang ditanyakan? jangan sungkan untuk berkomentar sambil ngopi-ngopi.. :smiley: :coffee:

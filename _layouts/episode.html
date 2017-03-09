@@ -1,35 +1,52 @@
 ---
 layout: default
 ---
-<div class="series-wrapper">
+{% include logo_without_nav.html %}
+{% include floating_icons.html %}
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="container container-l">  
+  
+  <div class="clear">
+    <div class="col-8-l push-2-l">      
+      <article class="episode" itemscope itemtype="http://schema.org/BlogPosting">
+        
+        {% assign col = site.collections | where: "label", page.collection | first %}
 
-    <header class="post-header">
-      {% assign col = site.collections | where: "label", page.collection | first %}
-    	<h2 class="collection-title"><a href="{{ site.url }}/{{ page.collection }}" title="Menuju halaman seri {{ col.title }}">{{ col.title }}:</a></h2>
-      <h1 class="post-title" itemprop="name headline">{{ page.clear_title }}</h1>
-      <span class="post-meta">{% include post_meta.html %}</span>
-    </header>
+        <h2 class="parent-title">
+          <a href="{{ site.url }}/{{ page.collection }}">
+            {{ col.title }}:
+          </a>
+        </h2>
 
-    <div class="post-content" itemprop="articleBody">
-      {{content}}
+        <h1 class="title" itemprop="headline">{{ page.clean_title }}</h1>
+        <div class="meta">
+          
+          {% assign episodes = site.[col.label] %}
+          {% for eps in episodes %}            
+            {% if eps.title == page.title %}
+              {% assign episode = forloop.index %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          <a class="link-primary" href="{{ site.url }}/{{ page.collection }}">Episode {{ episode }}</a>
+          <span class="vertical-devider"></span>
+          {% include content_meta.html %}
+        </div>
+        <div class="clear pad-top-20 pad-top-20 single-content">
+          {{ content }}
+        </div>
+      </article>
+      
+      <section class="comments">
+        {% include disqus.html %}
+      </section>
+    
     </div>
-
-  </article>
-
-  {% include mobile_menu.html %}
-  {% if site.disqus %}
-    {% include disqus_comments.html %}
-  {% endif %}
+  </div>
 
 </div>
 
-{% include sidebar.html %}
-
-<script type="text/javascript">
-  var window_width = $(window).width();
-  if(window_width < 800 ){
-    $('.series-wrapper').removeClass('series-wrapper');
-  }
-</script>
+<footer class="horizontal-menu pad-top-60">
+  {% include footer.html %}
+</footer>

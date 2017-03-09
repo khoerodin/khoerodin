@@ -1,5 +1,5 @@
 title               : 'Khoerodin'
-description         : 'I am a Web Developer over 3 years of experience with web technologies. I enjoy thinking about UX as much as solving difficult technical problems.'
+description         : 'Bebsite-blog yang ditulis Khoerodin, seorang web developer dengan pengalaman lebih dari 3 tahun. Website ini memuat materi web-development mulai dari dasar sampai tahap deployment ke server.'
 short_description   : 'Web Developer, Writer and Maker'
 lang                : id
 email               : khoerodin@live.com
@@ -27,14 +27,12 @@ kramdown:
   # do not replace newlines by <br>s
   hard_wrap: false
 
-paging_limit        : 5
-
 # https://github.com/oncleben31/jekyll-date-basic-i18n
 date_format         : '%-d %B %Y'
 
 # Details for the RSS feed generator
 url                 : 'https://khoerodin.id'
-permalink           : :title/
+permalink           : /blog/:title/
 
 collections:
   object-oriented-php:
@@ -44,6 +42,10 @@ collections:
     title: 'Object-Oriented PHP' # dipake di home, dan skill page
     skill: php #dipake di home, dan skill page
     level: intermediate #dipake di skill page
+
+  others:
+    output: true
+    permalink: /others/:path/
 
 defaults:
     -
@@ -58,9 +60,23 @@ defaults:
         type: posts
       values:
         layout: post
+
+# jekyll-archives
+jekyll-archives:
+  enabled: ['tags']
+  layout: 'tagar'
+  permalinks:
+    tag: '/blog/tagar/:name/'
+
+pagination:
+  enabled: true
+
+
 gems:
   - jekyll-redirect-from
   - jekyll-last-modified-at
+  - jekyll-archives
+  - jekyll-paginate-v2
   
 exclude:
   - README.md

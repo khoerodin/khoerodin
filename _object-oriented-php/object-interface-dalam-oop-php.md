@@ -1,19 +1,19 @@
 ---
 title: "Object Interface dalam OOP PHP"
-clear_title: "Object Interface"
+clean_title: "Object Interface"
 date: '2017-02-28 22:00:00'
 description: Object Interface adalah template untuk class dimana semua method di dalamnya harus diimplementasikan ulang oleh class yang memakainya ( mengimplementasikannya)
 layout: episode
 published: true
 ---
 
-**_Object Interface_** adalah _template_ untuk _class_ dimana semua _method_ di dalamnya harus diimplementasikan ulang oleh _class_ yang memakainya ( mengimplementasikannya).
+<mark><em>Object Interface</em></mark> adalah _template_ untuk _class_ dimana semua _method_ di dalamnya harus diimplementasikan ulang oleh _class_ yang memakainya ( mengimplementasikannya).
 
-*Object Interface* biasanya disebut hanya **_interface_** saja.
+*Object Interface* biasanya disebut <mark>hanya <em>interface</em></mark> saja.
 
 Langsung saja ke contoh agar lebih faham :sunglasses:
 
-**1. Cara membuat**  
+### 1. Cara membuat  
 Sama seperti pembuatan _class_, hanya saja _keyword class_ ketika pembuatan sebuah _class_ diganti dengan _keyword interface_
 
 ```php
@@ -24,19 +24,19 @@ interface User
 }
 ```
 
-**2. Method dalam _interface_ hanya berupa _signature_**  
-Artinya _method_ hanya berupa nama dan parameternya saja jika ada, tanpa memiliki isi dari _method (body)_
+### 2. Method dalam interface hanya berupa signature  
+Artinya _method_ hanya berupa nama dan argumennya saja jika ada, tanpa memiliki isi dari _method (body)_
 
 ```php
 interface User
 {
-    // hanya berupa nama method dan parameter jika ada
+    // hanya berupa nama method dan argumen jika ada
     public function username($username);
     public function gender();
 }
 ```
 
-**3. Diimplementasikan dengan keyword `implements`**  
+### 3. Diimplementasikan dengan keyword implements  
 _Class_ yang menggunakan (mengimplementasikan) _interface_, harus menggunakan keyword `implements`
 
 ```php
@@ -63,7 +63,7 @@ $john->username('john ');
 $john->gender();
 ```
 
-**4. Semua method dalam interface harus diimplementasikan ulang**
+### 4. Semua method dalam interface harus diimplementasikan ulang
 
 ```php
 interface User
@@ -83,7 +83,7 @@ class Member implements User
 
 Jika kode di atas tetap dijalankan maka akan keluar `Class Member contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (User::gender)...` karena _method_ `gender()` tidak diimplementasikan dalam `class Member`.
 
-**5. Satu _class_ boleh mengimplementasikan banyak _interface_**  
+### 5. Satu class boleh mengimplementasikan banyak interface  
 Satu class boleh mengimplementasikan lebih dari satu _interface_ dengan dipisahkan koma
 
 ```php
@@ -129,7 +129,7 @@ $john->gender();
 $john->myAddress('Jl. Pajajajaran ', 'Bandung');
 ```
 
-**6. Method dalam _interface_ dan _class_ yang menggunkan _interface_ harus public**  
+### 6. Method dalam interface dan dalam class yang mengimplementasikannya harus public  
 Jika ini dijalankan maka keluar `PHP Fatal error:  Access type for interface method User::username() must be omitted in ...` karena _method_ `User::username()` tidak di set `public`.
 
 ```php
@@ -174,7 +174,7 @@ class Member implements User
 }
 ```
 
-**7. _Interface_ bisa berupa turunan _interface_ lain**
+### 7. Interface bisa berupa turunan interface lain
 
 ```php
 interface User {
@@ -203,10 +203,10 @@ $john = new Member();
 echo $john->username('john');
 ````
 
-**8. Boleh mengimplementasikan dua _interface_ walaupun memiliki _method_ sama**  
+### 8. Boleh mengimplementasikan dua interface walaupun memiliki method sama  
 Mulai PHP 5.3.9 _class_ diperbolehkan mengimplementasikan dua _interface_ yang memiliki nama _method_ sama, selama _method_ memiliki _signature_ sama.
 
-Ini contoh yang **diperbolehkan**, karena signature sama
+Ini contoh yang <mark>diperbolehkan</mark>, karena signature sama
 
 ```php
 interface UserOne
@@ -232,7 +232,7 @@ $john = new Member();
 $john->username('john');
 ```
 
-Ini contoh yang **tidak diperbolehkan**, karena signature berbeda
+Ini contoh yang <mark>tidak diperbolehkan</mark>, karena signature berbeda
 
 ```php
 interface UserOne

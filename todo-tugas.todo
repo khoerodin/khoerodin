@@ -13,28 +13,20 @@
  Sebisa mungkin hindari penggunaan gambar, kecuali emang harus
  Jual ebook ditambah contoh kasus rumit
 
- ☐ create add to bitbucket
- ✔ add searching tool @done (17-02-24 11:27)
- ✔ skill page @done (17-02-26 13:30)
- ☐ search box position on small device
- ☐ fixed footer
- ✔ gimana caranya agar di collection page tidak usah pake label @done (17-02-24 14:12)
- ☐ seragamkan css responsive breakpoint
- ☐ gulp
- ☐ add newsletter
- ☐ create tag (versioning) before replace theme
- ☐ add redirect from old design
- ☐ cek untuk apa itemscope dalam tag artikel
- ☐ asset sebaiknya dimana sih?
- ☐ _config.yml di rapihkan, mana yang ngga perlu?, pake '' atau ngga? from matter juga tuh
- ✔ home content @done (17-02-23 20:49)
- ✔ hide sidebar on mobile when scrolldown @done (17-02-21 17:37)
- ✔ episode menu for mobile @done (17-02-22 12:30)
- ✔ separate html tag for series and non series @done (17-02-21 18:00)
- ✔ ipad pro sidebar not showing @done (17-02-22 15:04)
- ✔ generate xml for collections @done (17-02-22 16:38)
- ✔ when have many episode like 30? @done (17-02-22 09:04)
- ✔ remove reading time or not? - not @done (17-02-21 21:20)
- ✔ create seo tag manually, without plugin @done (17-02-21 21:11)
- ✔ minimalisasi js on-page, kalo bisa pake liquid aja @done (17-02-23 20:50)
- ✔ sidebar scrol on firefox is slow @done (17-02-23 20:49)
+ ✔ first load transistion @done (17-03-08 17:59)
+
+ buat buku:
+ketika nulis buku, andaikan saya baru faham variable dan echo
+konstruktor destruktor = yg belum contoh lebih komplit agar lebih faham
+pewarisan = yg belum disbeut parent, child, dll
+static property dan method = yg belum : penjelasan self dan parent, contoh yang statis (nilai tetap) : http://www.techflirt.com/tutorials/oop-in-php/static-methods-and-properties-in-php.html
+self, this, parent dan return, contoh belum komplit, ada di http://www.programmerinterview.com/index.php/php-questions/php-self-vs-this/
+class dalam file sendiri2, diberikan contoh
+Pewarisan (Obejct Inheritance), dijelaskan detik pada baris kode
+Reflection
+kelebihan dan kekurangan trait
+Static Trait Members
+http://stackoverflow.com/questions/1235013/what-is-a-member-vs-a-property
+http://lucybain.com/blog/2014/attribute-vs-property/
+http://stackoverflow.com/questions/1788923/parameter-vs-argument
+

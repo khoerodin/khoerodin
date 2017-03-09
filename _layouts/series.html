@@ -1,36 +1,55 @@
 ---
 layout: default
 ---
-<div class="series-wrapper">
+{% include logo_with_nav.html %}
 
-	<article class="post">
+<div class="container container-l series pad-top-30"> 
 
-		{% assign label = page.permalink | replace: "/", "" %}
-		{% assign series = site.collections | where: "label", label | first %}
-		{% assign episodes = site.[series.label] %}
+  <div class="clear pad-bottom-20">
+    <div class="col-12-l">
+      <div class="heading">
 
-		<header class="post-header">
-			<h1 class="post-title text-primary text-bold">{{ page.title | escape }}</h1>
-			<span class="series-meta">
-				SKILL <span class="text-primary"><a href="{{ site.url }}/skill/{{ series.skill }}" title="Menuju halaman skill {{ series.skill | upcase | escape }}">{{ series.skill | upcase | escape }}</a></span> • 
-				LEVEL <span class="text-primary">{{ series.level | upcase | escape }}</span> • 
-				<span class="text-primary">{{ episodes | size }}</span> EPISODE
-			</span>
-		</header>
+        {% assign label = page.permalink | replace: "/", "" %}
+        {% assign series = site.collections | where: "label", label | first %}
 
-		<div class="post-content">
-			<span class="series-content">{{ content }}</span>
-		</div>
-
-	</article>
-	
+        <h2 class="parent-title">{{ series.level | capitalize | escape }}</h2>
+        <h1>{{ page.title | escape }}</h1>          
+        {{ content }}
+      </div>      
+    </div>
+  </div>
+  
 </div>
-{% include sidebar.html %}
-{% include mobile_menu.html %}
 
-<script type="text/javascript">
-  var window_width = $(window).width();
-  if(window_width < 800 ){
-    $('.series-wrapper').removeClass('series-wrapper');
-  }
-</script>
+<div class="container container-l"> 
+  <div class="clear pad-top-25 pad-bottom-25">
+
+    {% assign label = page.permalink | replace: '/', '' %} 
+    {% assign col = site.collections | where: "label", label | first %}
+    {% assign series = site.[col.label] %}
+
+    {% for post in series %}
+    <div class="col-9-l">
+      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
+        <div class="post-list">
+          <div class="meta">
+            <span class="text-primary">Episode {{ forloop.index }}</span>
+            <span class="vertical-devider"></span>
+            {% include content_meta.html %}
+          </div>
+          <h3 class="pad-top-7">{{ post.clean_title }}</h3>
+          <div class="snippet-content">
+            {{ post.content | strip_html | truncatewords:25 }}
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+    
+  </div>
+
+</div>
+
+<footer class="horizontal-menu">
+  {% include footer.html %}
+</footer>

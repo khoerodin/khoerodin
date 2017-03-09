@@ -1,102 +1,67 @@
 ---
 layout: default
 ---
-<div class="home">
-	<form action="{{ site.url }}/search/" method="get">
-		<section class="search-area home-search-area">			
-			<input type="text" name="q" class="search-box home-search-box" placeholder="APA YANG AKAN DIPELAJARI?" id="search-box">
-		</section>
-	</form>
+{% include logo_with_nav.html %}
 
-	<section class="skills">
+<div class="container container-l pad-top-30">  
+  
+  <div class="clear home-featured-content">
 
-		<div class="skill-card">
-			<a href="{{ site.url }}/skill/tooling" class="skill-home-link">
-		    <div class="skill-info">
-				<div class="home-skill">TOOLING</div>
+    <div class="col-12-l pad-bottom-25">
+      <h2>Featured &nbsp<i class="icon ion-ios-arrow-right"></i></h2>
+    </div>
+    
+    {% assign oop_php = site.object-oriented-php | sample:4 %}
+    {% for post in oop_php %}
+    
+    {% if forloop.index == 1%}    
+      <div class="col-9-l pad-bottom-30">
+    {% else %}
+      <div class="col-4-l  pad-bottom-30">
+    {% endif %}    
 
-				{% assign tooling_series = site.collections | where: "skill", "tooling" %}
-				{% assign all_tooling_episode = 0 %}
-				{% for series in tooling_series %}
-					{% assign episodes = site.[series.label] %}
-					{% assign episodes_size = episodes | size %}
-					{% capture all_tooling_episode %}{{ all_tooling_episode | plus: episodes_size }}{% endcapture %}
-				{% endfor %}
+      {% assign col = site.collections | where: "label", post.collection | first %}
 
-				<div><span class="series-count text-primary">{{ tooling_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_tooling_episode }}</span> Episode</div>
-			</div>
-			</a>
-	  	</div>
 
-	  	<div class="skill-card">
-	  		<a href="{{ site.url }}/skill/layouting" class="skill-home-link">
-		    <div class="skill-info">
-				<div class="home-skill">LAYOUTING</div>
+      <h5>
+        <a href="{{ site.url }}/{{ post.collection }}" class="link-mute">
+        {{ col.title }}:
+        </a>
+      </h5>
+      <a href="{{ site.url }}{{ post.url }}" class="link-mute">
+        <h3>{{ post.clean_title }}</h3>
+      </a>
+      <div class="meta">
 
-				{% assign layouting_series = site.collections | where: "skill", "layouting" %}
-				{% assign all_layouting_episode = 0 %}
-				{% for series in layouting_series %}
-					{% assign episodes = site.[series.label] %}
-					{% assign episodes_size = episodes | size %}
-					{% capture all_layouting_episode %}{{ all_layouting_episode | plus: episodes_size }}{% endcapture %}
-				{% endfor %}
+        {% assign episodes = site.[col.label] %}
+        {% for eps in episodes %}            
+          {% if eps.title == post.title %}
+            {% assign episode = forloop.index %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
 
-				<div><span class="series-count text-primary">{{ layouting_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_layouting_episode }}</span> Episode</div>
-			</div>
-			</a>
-	  	</div>
+        <a class="link-primary" href="{{ site.url }}/{{ post.collection }}">Episode {{ episode }}</a>
+        <span class="vertical-devider"></span>
+        {% include content_meta.html %}
+      </div>
+      <a href="{{ site.url }}{{ post.url }}" class="link-mute">
+        <div class="snippet-content">
+          {% if forloop.index == 1%}    
+            {{ post.content | strip_html | truncatewords:45 }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords:15 }}
+          {% endif %}          
+        </div>
+      </a>       
+    </div>
 
-	  	<div class="skill-card">
-	  		<a href="{{ site.url }}/skill/javascript" class="skill-home-link">
-		    <div class="skill-info">
-				<div class="home-skill">JAVASCRIPT</div>
+    {% endfor %}
 
-				{% assign javascript_series = site.collections | where: "skill", "javascript" %}
-				{% assign all_javascript_episode = 0 %}
-				{% for series in javascript_series %}
-					{% assign episodes = site.[series.label] %}
-					{% assign episodes_size = episodes | size %}
-					{% capture all_javascript_episode %}{{ all_javascript_episode | plus: episodes_size }}{% endcapture %}
-				{% endfor %}
+  </div>
 
-				<div><span class="series-count text-primary">{{ javascript_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_javascript_episode }}</span> Episode</div>
-			</div>
-			</a>
-	  	</div>
-
-		<div class="skill-card">
-			<a href="{{ site.url }}/skill/php" class="skill-home-link">
-		    <div class="skill-info">
-				<div class="home-skill">PHP</div>
-				{% comment %}
-				ambil post 
-				dalam collection (yg selanjutnya dinamakan series)
-				yang skill php
-				{% endcomment %}
-				{% assign php_series = site.collections | where: "skill", "php" %}
-				
-				{% assign all_php_episode = 0 %}
-				
-				{% comment %}
-				keluarkan collection (series)
-				{% endcomment %}
-				{% for series in php_series %}
-					{% comment %}
-					ambil jml post dalam series
-					{% endcomment %}
-					{% assign episodes = site.[series.label] %}
-					{% assign episodes_size = episodes | size %}
-
-					{% comment %}
-					tambahkan all_php_episode
-					{% endcomment %}
-					{% capture all_php_episode %}{{ all_php_episode | plus: episodes_size }}{% endcapture %}
-				{% endfor %}
-				
-				<div><span class="series-count text-primary">{{ php_series | size }}</span> Seri <span class="episode-count text-primary">{{ all_php_episode }}</span> Episode</div>
-			</div>
-			</a>
-		</div>
-
-	</section>
 </div>
+
+<footer class="horizontal-menu">
+  {% include footer.html %}
+</footer>
