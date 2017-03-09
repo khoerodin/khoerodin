@@ -2,7 +2,7 @@
 title: "Trait dalam OOP PHP" 
 clean_title: "Trait" 
 date: '2017-03-03 10:50:00' 
-description: Trait adalah suatu mekanisme dimana suatu _class_ diizinkan untuk menggunakan kembali kode program _(code reuse)_ yang berasal dari hirarki yang berbeda. Mari kita perhatikan contoh di bawah ini, saya menggunakan analogi SMS, MMS, dan WhatsApp agar lebih mudah untuk difahami. 
+description: Trait adalah suatu mekanisme dimana suatu class diizinkan untuk menggunakan kembali kode program (code reuse) yang berasal dari hirarki yang berbeda. Mari kita perhatikan contoh di bawah ini, saya buat tiga buah class agar lebih mudah untuk difahami. 
 layout: episode 
 published: true 
 --- 
@@ -87,7 +87,7 @@ $obj = new Pesan();
 echo $obj->apaKabar(); 
 ``` 
  
-### 3. Multiple _trait_   
+### 3. Multiple trait   
 Satu _class_ boleh memakai lebih dari satu _trait_, cara memanggilnya dipisahkan oleh koma 
  
 ```php 
@@ -157,7 +157,7 @@ echo $obj->apaKabar();
 echo $obj->selamatPagi(); 
 ``` 
  
-### 5. Trait tidak bisa dijadikan _object_ (diinstansiasi)   
+### 5. Trait tidak bisa dijadikan object (diinstansiasi)   
 Jika ini tetap dijalankan maka akan keluar error: `PHP Fatal error:  Uncaught Error: Cannot instantiate trait ApaKabar ...` 
  
 ```php 
