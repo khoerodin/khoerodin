@@ -21,6 +21,10 @@
               href="{% if page.url == '/' %}javascript:void(0){% else %}{{ site.url }}{% endif %}">Home</a>
             </span>
             <span class='nav-item'><a 
+              class="{% if page.url == '/html-css/' %}active{% endif %}" 
+              href="{% if page.url == '/html-css/' %}javascript:void(0){% else %}{{ site.url }}/html-css/{% endif %}">HTML & CSS</a>
+            </span>
+            <span class='nav-item'><a 
               class="{% if page.url == '/object-oriented-php/' %}active{% endif %}" 
               href="{% if page.url == '/object-oriented-php/' %}javascript:void(0){% else %}{{ site.url }}/object-oriented-php/{% endif %}">Object-Oriented PHP</a>
             </span>
