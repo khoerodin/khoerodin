@@ -43,6 +43,14 @@ collections:
     skill: php #dipake di home, dan skill page
     level: intermediate #dipake di skill page
 
+  html-css:
+    output: true
+    permalink: /html-css/:path/
+    label: 'html-css' # dipake di home, dan skill page
+    title: 'HTML & CSS' # dipake di home, dan skill page
+    skill: layouting #dipake di home, dan skill page
+    level: beginner #dipake di skill page
+
   others:
     output: true
     permalink: /others/:path/
