@@ -12,8 +12,8 @@ layout: default
         {% assign label = page.permalink | replace: "/", "" %}
         {% assign series = site.collections | where: "label", label | first %}
 
-        <h2 class="parent-title">{{ series.level | capitalize | escape }}</h2>
-        <h1>{{ page.title | escape }}</h1>          
+        <h2 class="parent-title">{{ series.level | capitalize }}</h2>
+        <h1>{{ page.title }}</h1>          
         {{ content }}
       </div>      
     </div>
