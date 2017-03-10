@@ -16,6 +16,10 @@ layout: null
 		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 	</sitemap>
 	<sitemap>
+		<loc>{{ site.url }}/sitemap-html-css.xml</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	</sitemap>
+	<sitemap>
 		<loc>{{ site.url }}/sitemap-others.xml</loc>
 		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 	</sitemap>
