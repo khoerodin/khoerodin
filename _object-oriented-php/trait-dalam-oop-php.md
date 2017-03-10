@@ -361,7 +361,7 @@ echo $pesan->salam();
 echo $pesan->salamKedua(); 
 ``` 
  
-jika kita perhatikan kode program di atas dalam _class_ `Pesan` terdapat `Sapaan::salam as salamKedua;` artinya method `salam()` dalam trait Sapaan tetap dipakai tetapi diberikan alias `salamKedua` agar beda dengan `salam()` dari trait `Selamat`. 
+jika kita perhatikan kode program di atas dalam _class_ `Pesan` terdapat `Sapaan::salam as salamKedua;` artinya method `salam()` dalam trait `Sapaan` tetap dipakai tetapi diberikan alias `salamKedua` agar beda dengan `salam()` dari trait `Selamat`. 
  
 ### 6. Trait boleh memiliki property   
 _Trait_ boleh memiliki _property_ tetapi _class_ yang menggunakan _trait_ tersebut tidak diizinkan mendefinisikan kembali _property_ dengan nama yang sama. 
