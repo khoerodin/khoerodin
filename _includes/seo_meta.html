@@ -1,15 +1,15 @@
 {% if page.title %}
-	{% assign title = page.title | append: ' — ' | append: site.title | strip_html %}
+	{% assign title = page.title | strip_html | append: ' — ' | append: site.title | markdownify | strip_html %}
 {% else %}
-	{% assign title = site.title | append: ' — ' | append: site.short_description | strip_html %}
+	{% assign title = site.title | strip_html | append: ' — ' | append: site.short_description | markdownify | strip_html %}
 {% endif %}
 
 {% if page.description %}
-	{% assign description = page.description %}
+	{% assign description = page.description | markdownify | strip_html %}
 {% elsif page.url == '/' %}
-	{% assign description = site.description %}
+	{% assign description = site.description | markdownify | strip_html %}
 {% else %}
-	{% assign description = page.content | strip_html | truncatewords:25 %}
+	{% assign description = page.content | markdownify | strip_html | truncatewords:25 %}
 {% endif %}	
 
 {% if page.author %}
@@ -29,12 +29,12 @@
 	{% assign author_facebook = site.facebook %}
 {% endif %}
 
-<title>{{ title | escape }}</title>
-<meta name="description" content="{{ description | escape }}"/>
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}"/>
 
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="{{ title | escape }}"/>
-<meta property="og:description" content="{{ description | escape }}"/>
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:description" content="{{ description }}"/>
 <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
 <meta property="og:site_name" content="{{ site.title }}"/>
 
@@ -50,7 +50,7 @@
 {% if page.collection %}
 	{% assign col = site.collections | where: "label", page.collection | first %}
 	{% assign section = col.name %}
-	<meta property="article:section" content="{{ section | escape}}"/>
+	<meta property="article:section" content="{{ section }}"/>
 {% endif %}
 
 {% if page.image %}
@@ -63,8 +63,8 @@
 	<meta name="twitter:image" content="{{ site.url }}{{ page.image }}"/>
 {% endif %}
 
-<meta name="twitter:title" content="{{ title | escape }}"/>
-<meta name="twitter:description" content="{{ description | escape }}"/>
+<meta name="twitter:title" content="{{ title }}"/>
+<meta name="twitter:description" content="{{ description }}"/>
 
 {% if site.twitter %}
 	<meta name="twitter:site" content="@{{ site.twitter }}"/>
