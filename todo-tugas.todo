@@ -29,4 +29,9 @@ Static Trait Members
 http://stackoverflow.com/questions/1235013/what-is-a-member-vs-a-property
 http://lucybain.com/blog/2014/attribute-vs-property/
 http://stackoverflow.com/questions/1788923/parameter-vs-argument
+https://www.phpclasses.org/blog/post/325-PHP-7-Nested-Anonymous-Classes-Tutorial.html
+https://www.tutorialspoint.com/php7/php7_anonymous_classes.htm => perhatikan
+ : Logger, apah ituh?
+ setLogger(Logger $logger) ?
+ log(string $msg)
 
