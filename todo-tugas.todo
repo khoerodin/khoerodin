@@ -34,4 +34,3 @@ https://www.tutorialspoint.com/php7/php7_anonymous_classes.htm => perhatikan
  : Logger, apah ituh?
  setLogger(Logger $logger) ?
  log(string $msg)
-
