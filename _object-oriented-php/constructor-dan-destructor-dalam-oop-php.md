@@ -19,7 +19,8 @@ _Method_ `__destruct()` akan dieksekusi ketika _object_ dihapus atau berhenti di
 
 Perhatikan kode berikut:
 
-```php
+{% highlight php %}
+<?php
 class User {
 
     private $name = 'Bagus';
@@ -49,7 +50,7 @@ $bagus = new User();
 
 // panggil method dari object $bagus
 echo $bagus->showBio();
-```
+{% endhighlight %}
 
 Jika kode di atas dijalankan maka _outputnya_ `Ini dari konstruktor. Nama saya Bagus dan saya berasal dari Yogyakarta Ini dari destruktor.`
 

@@ -27,7 +27,8 @@ Mari kita praktekkan penggunaan _visibility keyword_
 ### 1. Property Visibility
 _Property_ harus didefinisikan sebagai `public`, `protected` atau `private`, jika dideklarasikan menggunakan `var` maka otomatis didefinisikan sebagai `public`.
 
-```php
+{% highlight php %}
+<?php
 class User {
 
     var $name = 'Khoerodin';
@@ -50,7 +51,7 @@ $UserGanteng = new User();
 
 // Menampilkan name
 echo $UserGanteng->name;
-```
+{% endhighlight %}
 
 Jika kode di atas dijalankan maka akan keluar `Khoerodin`, coba sekarang ganti dengan `echo $UserGanteng->brithdate;`, apa yang terjadi? maka akan `Fatal Error`, karena _property_ `$brithdate` itu `protected`. 
 
@@ -61,7 +62,8 @@ Sekarang ganti lagi dengan `$UserGanteng->showBio();`, ini tidak akan error kare
 ### 2. Method Visibility
 <mark><em>Method</em></mark> bisa didefinisikan sebagai `public`, `protected` atau `private`, jika dideklarasikan <mark>tanpa</mark> menggunakan salah satu dari tiga _visibility keyword_ tersebut maka otomatis didefinisikan sebagai `public`.
 
-```php
+{% highlight php %}
+<?php
 class User {
 
     // mendeklarasikan public method
@@ -108,12 +110,13 @@ $Khoerodin->privateMethod();
 // yang dideklarasikan tidak menggunakan visibility keyword
 // otomatis public
 $Khoerodin->showAll();
-```
+{% endhighlight %}
 
 ### 3. Constant Visibility
 <mark>Mulai PHP 7.1.0</mark> konstanta atau lebih tepatnya konstanta _class_ dapat didefinisikan sebagai `public`, `protected` atau `private`. Jika konstanta dideklarasikan <mark>tanpa</mark> menggunakan salah satu dari tiga _visibility keyword_ tersebut maka otomatis didefinisikan sebagai `public`.
 
-```php
+{% highlight php %}
+<?php
 class User {
 
     // mendeklarasikan public konstanta
@@ -152,6 +155,6 @@ $Khoerodin::PRIVATE_CONSTANT;
 // tampil semua karena berada dalam
 // public method
 $Khoerodin->showAll();
-```
+{% endhighlight %}
 
 Demikian pembahasan tentang _visibility_ dalam <a href="{{ site.url }}/object-oriented-php">Object-Oriented PHP</a> atau yang biasa disebut dengan <mark><em>encapsulation</em></mark>.

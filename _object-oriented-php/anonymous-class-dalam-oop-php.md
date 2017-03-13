@@ -11,7 +11,8 @@ Seperti namanya _Anonymous Class_ adalah class anonim alias tanpa nama. _Anonymo
 
 <mark><em>Anonymous class</em> mulai diperkenalkan oleh PHP 7.0</mark>, kita perhatikan contoh ini, keterangan saya sisipkan dalam baris kode
 
-```php
+{% highlight php %}
+<?php
 class User {
 
   private $name;
@@ -47,11 +48,12 @@ $obj->setName(new class {
 // jika ini dijalankan akan keluar
 // Given name: Bagus
 echo $obj->getName()->show("Bagus");
-```
+{% endhighlight %}
 
 Saya kembali membuat kode program seperti di atas namun tidak menggunakan anonymous class
 
-```php
+{% highlight php %}
+<?php
 class User {
 
   private $name;
@@ -86,7 +88,7 @@ $user->setName($show);
 // jika ini dijalankan akan sama
 // hasilnya dengan contoh pertama
 echo $user->getName()->show("Bagus");
-```
+{% endhighlight %}
 
 Jika kode program di atas dijalankan hasilnya akan tetap sama, hanya saja pada contoh yang kedua tidak lagi menggunakan anonymous class. Lebih simple contoh yang pertama kan? :grinning:
 
@@ -94,7 +96,8 @@ Jika kode program di atas dijalankan hasilnya akan tetap sama, hanya saja pada c
 _Anonymous class_ bertindak seperti _class_ regular:
 #### a. Boleh diberi argumen, meng-*extend class* lain, meng-*implement interface* dan menggunakan _trait_.
 
-```php
+{% highlight php %}
+<?php
 class ThisClass {}
 interface ThisInterface {}
 trait ThisTrait {}
@@ -140,13 +143,14 @@ $obj->setName(new class('Hartono') extends ThisClass implements ThisInterface {
 // jika dijalankan akan keluar:
 // Given name: Bagus Hartono
 echo $obj->getName()->show("Bagus");
-```
+{% endhighlight %}
 
 #### b. Tidak boleh akses private dan protected
 Ketika _anonymous class_ dibungkus oleh class lain, walaupun dibungkus oleh _class_ lain tetap saja _anonymous class_ tidak diperbolehkan mengakses _private_ dan _protected method_ atau _property_ yang berasal dari _class_ yang membungkusnya.
 
 Berikut contohnya, keterangan disisipkan dalam baris kode
-```php
+{% highlight php %}
+<?php
 class Bungkus
 {
     private $warna = 'coklat ';
@@ -188,14 +192,15 @@ $obj = new Bungkus();
 // jika dijalankan hasilnya:
 // Bungkus kertas coklat dipakai untuk wadah Nasi Padang
 echo $obj->diPakai()->makanan();
-```
+{% endhighlight %}
 
 Ingat ya.. hanya seperti, bukan sama. Untuk keperluan _inheritance_ tetap saja membutuhkan _class regular_ yang memiliki nama.
 
 Sebenarnya _anonymous class_ memiliki nama, ini bisa kita buktikan dengan menjalankan sebuah _function_ yang digunakan untuk mengambil nama _class_ dari sebuah _object_: `get_class(object)`
 
-```php
+{% highlight php %}
+<?php
 echo get_class(new class {});
-```
+{% endhighlight %}
 
 Ada yang ditanyakan? :sunglasses:

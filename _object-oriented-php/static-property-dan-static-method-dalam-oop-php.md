@@ -19,7 +19,8 @@ Perhatikan dan fahami contoh-contoh berikut:
 
 ### 1. Static Property
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     // diawali dengan keyword static
@@ -74,11 +75,12 @@ echo Bio::$address . "<br/>";
 // berasal dari class induk
 $BioObject = new Bio();
 echo $BioObject->showBio();
-```
+{% endhighlight %}
 
 ### 2. Static Method
 
-```php
+{% highlight php %}
+<?php
 class User {
     // diawali dengan keyword static
     // setelah visibility keyword
@@ -103,6 +105,6 @@ $UserObject::showBio();
 // variable yang ber-value nama class
 $this_variable = 'User';
 $this_variable::showBio();
-```
+{% endhighlight %}
 
 Mudah bukan? silakan kasih komentar jika belum faham :blush:

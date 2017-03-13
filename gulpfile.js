@@ -13,12 +13,10 @@ const browserSync = require('browser-sync');
 gulp.task('scripts', function() {  
     return gulp.src(
     		[
-    			'_assets/js/vendor/jquery.min.js',
-                '_assets/js/vendor/highlight.min.js',
-                '_assets/js/vendor/emojione.min.js',
-                '_assets/js/vendor/nprogress.js',
+                '_assets/js/vendor/jquery_min.js',
+                '_assets/js/vendor/senna_min.js',
                 '_assets/js/default.js',
-    			'_assets/js/jekyll.js',
+                '_assets/js/jekyll.js',
     		])
         .pipe(uglify())
         .pipe(concat('scripts.min.js'))

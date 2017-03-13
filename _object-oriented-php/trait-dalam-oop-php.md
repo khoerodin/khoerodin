@@ -11,7 +11,8 @@ published: true
  
 Mari kita perhatikan contoh di bawah ini, saya buat tiga buah class: 
  
-```php 
+{% highlight php %}
+<?php 
 class ApaKabar 
 { 
     public function apaKabar() { 
@@ -30,11 +31,12 @@ class Pesan
 { 
   // 
 } 
-``` 
+{% endhighlight %} 
  
 Jika kita menghendaki `class Pesan` bisa menggunakan _method_ `apaKabar()` maka kita tinggal melakukan `extends` ke _class_ `ApaKabar` seperti: 
  
-```php 
+{% highlight php %}
+<?php 
 class ApaKabar 
 { 
     public function apaKabar() { 
@@ -49,14 +51,15 @@ class Pesan extends ApaKabar
  
 $obj = new Pesan(); 
 echo $obj->apaKabar(); 
-``` 
+{% endhighlight %} 
  
 Terus bagaimana jika kita ingin `class Pesan` dapat menggunakan _method_ `apaKabar()` dan `selamatPagi()`? _class_ `Pesan` meng-*extends* _class_ `ApaKabar` dan _class_ `SelamatPagi`? tentu ini tidak diperbolehkan oleh PHP, PHP hanya memperbolehkan satu _parent class_ . Untuk itulah adanya **`Trait`** 
  
 ### 1. Cara membuat trait   
 Sama seperti pembuatan _class_, hanya saja `class` diganti dengan `trait` 
  
-```php 
+{% highlight php %}
+<?php 
 // dengan keyword trait 
 trait ApaKabar 
 { 
@@ -64,12 +67,13 @@ trait ApaKabar
         return "Apa kabar?"; 
     } 
 } 
-``` 
+{% endhighlight %} 
  
 ### 2. Cara memakai trait   
 Cara memakai _trait_ yaitu dengan menggunakan _keyword_ `use` dalam sebuah _class_ dan diiringi nama _trait_ 
  
-```php 
+{% highlight php %}
+<?php 
 trait ApaKabar 
 { 
     public function apaKabar() { 
@@ -85,12 +89,13 @@ class Pesan
  
 $obj = new Pesan(); 
 echo $obj->apaKabar(); 
-``` 
+{% endhighlight %} 
  
 ### 3. Multiple trait   
 Satu _class_ boleh memakai lebih dari satu _trait_, cara memanggilnya dipisahkan oleh koma 
  
-```php 
+{% highlight php %}
+<?php 
 trait ApaKabar 
 { 
     public function apaKabar() { 
@@ -114,12 +119,13 @@ class Pesan
 $obj = new Pesan(); 
 echo $obj->apaKabar(); 
 echo $obj->selamatPagi(); 
-``` 
+{% endhighlight %} 
  
 ### 4. Sebuah trait tersusun dari banyak trait   
 Sebuah _trait_ boleh tersusun dari _trait_ yang telah ada 
  
-```php 
+{% highlight php %}
+<?php 
 // trait pertama 
 trait ApaKabar 
 { 
@@ -155,12 +161,13 @@ class Pesan
 $obj = new Pesan(); 
 echo $obj->apaKabar(); 
 echo $obj->selamatPagi(); 
-``` 
+{% endhighlight %} 
  
 ### 5. Trait tidak bisa dijadikan object (diinstansiasi)   
 Jika ini tetap dijalankan maka akan keluar error: `PHP Fatal error:  Uncaught Error: Cannot instantiate trait ApaKabar ...` 
  
-```php 
+{% highlight php %}
+<?php 
 trait ApaKabar 
 { 
     public function apaKabar() { 
@@ -169,7 +176,7 @@ trait ApaKabar
 } 
  
 $obj = new ApaKabar(); 
-``` 
+{% endhighlight %} 
  
 ### 5. Urutan prioritas method   
 Urutan prioritas _method_ dalam trait memiliki dua aturan: 
@@ -179,7 +186,8 @@ Urutan prioritas _method_ dalam trait memiliki dua aturan:
  
 Ini contoh untuk aturan pertama 
  
-```php 
+{% highlight php %}
+<?php 
 class ApaKabar 
 {   
     // ini akan diturunkan 
@@ -210,7 +218,7 @@ $pesan = new Pesan();
 echo $pesan->apaKabar(); 
 // jika dijalankan akan keluar 
 // Apa kabar pagi ini? 
-``` 
+{% endhighlight %} 
  
 _Class_ `Pesan` adalah turunan dari _class_ `ApaKabar` yaitu dengan meng-*extends* `ApaKabar` dan class `Pesan` juga menggunakan trait `SelamatPagi` yaitu dengan `use SelamatPagi`. 
  
@@ -220,7 +228,8 @@ Dengan kondisi seperti ini ketika _object_ `$pesan` memanggil method `apaKabar()
  
 Ini contoh untuk aturan kedua: 
  
-```php 
+{% highlight php %}
+<?php 
 trait ApaKabar 
 { 
     // apaKabar() dari trait 
@@ -244,12 +253,13 @@ $pesan = new Pesan();
 echo $pesan->apaKabar(); 
 // coba jalankan maka akan keluar 
 // Apa kabarnya sekarang? 
-``` 
+{% endhighlight %} 
  
 ### 6. Menangani konflik   
 Ketika sebuah _class_ menggunakan _trait_ lebih dari satu, kita bisa saja menemukan kondisi dimana _trait_ yang berbeda menggunakan nama method yang sama, seperti contoh ini 
  
-```php 
+{% highlight php %}
+<?php 
 trait Selamat 
 { 
     public function salam() { 
@@ -271,7 +281,7 @@ class Pesan
  
 $pesan = new Pesan(); 
 echo $pesan->salam(); 
-``` 
+{% endhighlight %} 
  
 Ketika kode program di atas tetap dijalankan maka akan keluar fatal error. Lalu bagaimana agar tetap bisa dijalankan?  
  
@@ -283,7 +293,8 @@ Terdapat dua cara:
  
 Contoh untuk cara pertama: 
  
-```php 
+{% highlight php %}
+<?php 
 trait Ucapan 
 { 
     public function salam() { 
@@ -317,13 +328,14 @@ class Pesan
  
 $pesan = new Pesan(); 
 echo $pesan->salam(); 
-``` 
+{% endhighlight %} 
  
 jika kita perhatikan kode program di atas dalam _class_ `Pesan` terdapat `Selamat::salam insteadof Ucapan, Sapaan;` yang artinya yang akan digunakan adalah method `salam()` dalam trait `Selamat` bukan dari trait `Ucapan` dan `Sapaan`. 
  
 Contoh untuk cara kedua: 
  
-```php 
+{% highlight php %}
+<?php 
 trait Ucapan 
 { 
     public function salam() { 
@@ -359,7 +371,7 @@ class Pesan
 $pesan = new Pesan(); 
 echo $pesan->salam(); 
 echo $pesan->salamKedua(); 
-``` 
+{% endhighlight %} 
  
 jika kita perhatikan kode program di atas dalam _class_ `Pesan` terdapat `Sapaan::salam as salamKedua;` artinya method `salam()` dalam trait `Sapaan` tetap dipakai tetapi diberikan alias `salamKedua` agar beda dengan `salam()` dari trait `Selamat`. 
  
@@ -370,7 +382,8 @@ Jika _class_ tetap mendefinisikan ulang _property_ dengan nama yang sama, <mark>
  
 Jika <mark>tingkat visibilitas dan atau <em>value</em>nya tidak sama</mark> dengan _property_ yang berada dalam trait maka akan keluar fatal error. 
  
-```php 
+{% highlight php %}
+<?php 
 trait Selamat { 
     public $satu = 1; 
     protected $dua = 2; 
@@ -381,11 +394,12 @@ class Pesan {
     public $satu = 1; // keluar peringatan 
     public $dua = 2; // Fatal error 
 } 
-``` 
+{% endhighlight %} 
  
 ### 7. Method dalam trait boleh mengakses method dan property dalam class yang memakainya meskipun private   
  
-```php 
+{% highlight php %}
+<?php 
 trait BukaPesan 
 { 
     protected function BukaPesan() { 
@@ -406,12 +420,13 @@ class PesanPrivate
 $pesan = new PesanPrivate(); 
 echo $pesan->pesanPrivate(); 
 // bisa akses pesan private, coba praktekkan 
-``` 
+{% endhighlight %} 
  
 ### 8. Trait boleh memiliki abstract method   
 Penggunaannya sama saja seperti dalam _abstrct class_ 
  
-```php 
+{% highlight php %}
+<?php 
 trait Selamat{ 
     public function salam() { 
         echo 'Selamat pagi '. $this->getName(); 
@@ -433,12 +448,13 @@ class Pesan {
 $obj = new Pesan(); 
 $obj->setName('Andi'); 
 echo $obj->salam(); // Selamat pagi Andi 
-``` 
+{% endhighlight %} 
  
-**9. Merubah visibility method**   
+### 9. Merubah visibility method  
 _Method_ dalam _trait_ boleh diubah *visibility*-nya oleh class menggunakan keyword `as` 
  
-```php 
+{% highlight php %}
+<?php 
 trait Selamat { 
     public function malam() { 
         echo 'Selamat malam!'; 
@@ -456,6 +472,6 @@ class Pesan {
 class PesanKedua { 
     use Selamat { malam as private ucapanPrivate; } 
 } 
-``` 
+{% endhighlight %} 
  
 Banyak banget ya tulisannya? :stuck_out_tongue_closed_eyes: walaupun banyak tapi mudah difahami kan? :blush:

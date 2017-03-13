@@ -14,12 +14,13 @@ Konstanta *Class* atau <mark><em>Class Constants</em></mark> adalah konstanta ya
 ### Mendefinisikan Konstanta Class
 Mendefinisikan Konstanta *Class* yaitu diawali dengan menggunakan *keyword* `const`. Berikut contoh konstanta dalam sebuah *class*
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     const JK = 'Laki-laki';
 }
-```
+{% endhighlight %}
 
 <mark>Agar lebih mudah membedakan antara <em>variable</em> dengan konstanta, konstanta biasanya ditulis menggunakan huruf kapital.</mark>
 
@@ -28,7 +29,8 @@ class User
 
 Caranya yaitu dengan menggunakan *keyword* `self` diikuti dengan titik dua ganda *(double colon)* dan konstanta.
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     const JK = 'Laki-laki';
@@ -37,26 +39,28 @@ class User
         echo self::JK;
     }
 }
-```
+{% endhighlight %}
 
 #### 2. Akses dari luar Class
 
 Menggunakan nama *class*, *double colon* dan konstanta.
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     const JK = 'Laki-laki';
 }
 
 echo User::JK;
-```
+{% endhighlight %}
 
 #### 3. Akses dari object
 
 Caranya yaitu menggunakan *object*, *double colon* dan konstanta.  
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     const JK = 'Laki-laki';
@@ -64,25 +68,27 @@ class User
 
 $objek = new User();
 echo $objek::JK; // Mulai PHP 5.3.0
-```
+{% endhighlight %}
 
 #### 3. Akses dari variable yang ber-*value* nama sebuah class
 
 Nama *class* terlebih dahulu dijadikan *variable value*. Tapi perlu diperhatikan bahwa *variable value* tidak boleh berupa *keyword* seperti `self`, `parent` and `static`.
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     const JK = 'Laki-laki';
 }
 $classname = "User";
 echo $classname::JK; // Mulai PHP 5.3.0
-```
+{% endhighlight %}
 
 #### Tambahan
 Mulai PHP 5.6.0 Konstanta *Class* juga dapat ber-*value* dari konstanta *regular*.
 
-```php
+{% highlight php %}
+<?php
 const SATU = 1;
 
 class User {
@@ -91,11 +97,12 @@ class User {
     const TIGA = SATU + self::DUA;
     const EMPAT = 'Nilai dari TIGA adalah '.self::TIGA;
 }
-```
+{% endhighlight %}
 
 Mulai PHP 7.1.0 <mark><em>Visibility Modifier</em></mark> juga bisa ditambahkan ke Konstanta *Class*.
 
-```php
+{% highlight php %}
+<?php
 class User {
     // Mulai PHP 7.1.0
     public const JK = 'Laki-laki';
@@ -103,7 +110,7 @@ class User {
 }
 echo User::JK . "<br/>";
 echo User::PENDIDIKAN;
-```
+{% endhighlight %}
 
 Jika kode diatas dijalankan pasti akan error, karena `const PENDIDIKAN` adalah `private`.
 

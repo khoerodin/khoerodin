@@ -14,7 +14,8 @@ Setelah dalam <a href="{{ site.url }}/object-oriented-php/apa-itu-oop-object-ori
 ### 1. Class
 Simplenya *class* adalah *blueprint* dari *object*. *Class* digunakan sebagai kerangka dasar atau cetakan yang menyimpan *property* dan *method*, dan yang akan kita pakai adalah hasil cetakan tersebut yaitu *object*. Aturan penamaan *class* <mark>diawali dengan huruf atau <em>underscore</em> untuk karakter pertama, kemudian boleh diikuti dengan huruf, <em>underscore</em> atau angka untuk karakter kedua dan selanjutnya</mark>. Masih bingung ya? Berikut contoh cara penulisan *class* dalam PHP, dalam contoh di bawah saya buat *class* `User`
 
-```php
+{% highlight php %}
+<?php
 // diawali dengan kata class diikuti dengan nama class
 // setelah nama class diikuti kurung kurawal buka
 // dan diakhiri kurung kurawal tutup
@@ -25,17 +26,18 @@ class User {
   // property dan method akan dijelaskan kok
   // jangan khawatir...
 }
-```  
+{% endhighlight %}  
 
 ### 2. Property
 *Property* sebenarnya hanyalah sebuah *variable* yang terletak dalam sebuah *class*. Dalam literatur yang lain *property* disebut juga dengan *attribute*. Cara penulisan *property* ialah dengan didahului oleh `var` atau <mark><em>visibility keyword</em></mark> yaitu `public` atau `protected` atau `private` dan diikuti dengan penulisan nama *variable* sebagaimana biasanya dalam PHP yaitu diawali dengan huruf atau *underscore* untuk karakter pertama, kemudian boleh diikuti dengan huruf, *underscore* atau angka untuk karakter kedua dan selanjutnya. Perhatikan contoh di bawah:
 
-```php
+{% highlight php %}
+<?php
 class User {
     var $name;
     public $username;
     protected $brithdate;
     private $address;
 }
-```
+{% endhighlight %}
 terus itu *visibility keyword* dalam property untuk apa? sabar..... akan dibahas dalam artikel tersendiri kok, pokoknya baca saja artikel <a href="{{ site.url }}/object-oriented-php">seri ini</a> urut sesuai episodenya ya :smiley:

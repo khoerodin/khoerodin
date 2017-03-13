@@ -16,16 +16,6 @@ google_analytics    : 'UA-91739383-1'
 disqus              : 'khoerodin'
 
 markdown            : kramdown
-highlighter         : rouge
-# https://github.com/jekyll/jekyll/issues/4619
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    disable: true
-  # do not replace newlines by <br>s
-  hard_wrap: false
 
 # https://github.com/oncleben31/jekyll-date-basic-i18n
 date_format         : '%-d %B %Y'
@@ -85,6 +75,7 @@ gems:
   - jekyll-last-modified-at
   - jekyll-archives
   - jekyll-paginate-v2
+  - jemoji
   
 exclude:
   - README.md

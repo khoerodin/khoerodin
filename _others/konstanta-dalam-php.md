@@ -19,19 +19,21 @@ Cara mendefinisikan konstanta ada dua macam dalam PHP, yaitu
 
 Pendefinisian konstanta menggunakan *keyword* `const` hanya dapat digunakan pada *top-level scope*, yakni harus dalam lingkungan *global* PHP. Sehingga kita tidak bisa menggunakan `const` di dalam *function*, *loop*, atau kondisi if.
 
-```php
+{% highlight php %}
+<?php
 const blog = "khoerodin.id";
 echo blog;  // khoerodin.id
-```
+{% endhighlight %}
 
 **2. Menggunakan fungsi `define()`**
 
 Jika ingin mendefinisikan konstanta menggunakan fungsi `define()` maka membutuhkan dua nilai yaitu nama konstanta dan nilainya.
 
-```php
+{% highlight php %}
+<?php
 define("blog", "khoerodin.id");
 echo blog;  // khoerodin.id
-```
+{% endhighlight %}
 
 ### Bersifat Case Sensitif
 Konstanta dalam PHP sama seperti *variable* yaitu bersifat *case sensitif*, jadi konstanta `User`, `user` dan `USER` akan dianggap sebagai tiga konstanta yang berbeda.
@@ -42,11 +44,12 @@ Namun para *programmer* PHP **menganjurkan** menggunakan **huruf kapital semua**
 
 Sebagaimana dijelaskan di atas, konstanta sifatnya tetap dan tidak bisa diubah sepanjang program berjalan. contoh:
 
-```php
+{% highlight php %}
+<?php
 define("USER", "Khoerodin");
 echo USER . "<br />"; 
 define("USER", "MUKIDI");
-```
+{% endhighlight %}
 
 jika kode di atas tetap dijalankan maka akan keluar *error*.
 

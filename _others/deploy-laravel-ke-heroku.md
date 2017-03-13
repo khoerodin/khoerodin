@@ -32,37 +32,37 @@ Sebelum dimulai, pastikan Anda telah memahami:
 
 Buat *project* Laravel seperti biasa
 
-```bash
+{% highlight shell_session %}
 $ laravel new herovel
 ...
 $ cd herovel
-```
+{% endhighlight %}
 
 #### Initialize Git
 
-```bash
+{% highlight shell_session %}
 $ git init
 $ git add .
 $ git commit -m "initial commit laravel to heroku"
-```
+{% endhighlight %}
 
 #### Membuat Procfile
 
-```bash
+{% highlight shell_session %}
 $ echo web: vendor/bin/heroku-php-apache2 public/ > Procfile
 $ git add .
 $ git commit -m "procfile for heroku"
-```
+{% endhighlight %}
 
 #### Create Heroku Apps
 
-```bash
+{% highlight shell_session %}
 $ heroku create
-```
+{% endhighlight %}
 
 #### Install Database Addons
 
-```bash
+{% highlight shell_session %}
 // Jika menggunakan PostgreSQL
 $ heroku addons:create heroku-postgresql:hobby-dev
 
@@ -71,9 +71,9 @@ $ heroku config:get DATABASE_URL
 
 // Maka akan muncul URL database dengan format:
 // postgres://username:password@host:port/database_name
-```
+{% endhighlight %}
 
-```bash
+{% highlight shell_session %}
 // Jika menggunakan MySQL
 $ heroku addons:create cleardb:ignite
 
@@ -82,13 +82,13 @@ $ heroku config:get CLEARDB_DATABASE_URL
 
 // Maka akan muncul URL database dengan format:
 // mysql://username:password@host/database_name?reconnect=true
-````
+{% endhighlight %}`
 
 #### Set ENV variables
 
 Set *.env variables* sesuai kebutuhan Anda:
 
-```bash
+{% highlight shell_session %}
 // DB_CONNECTION ganti sesuai dengan yang Anda pakai
 // DB_HOST, DB_PORT, DB_DATABASE, 
 // DB_USERNAME dan DB_PASSWORD 
@@ -109,19 +109,19 @@ DB_PORT=port \
 DB_DATABASE=database_name \
 DB_USERNAME=username \
 DB_PASSWORD=password
-```
+{% endhighlight %}
 
 #### Push to Heroku and Migrate
 
-```bash
+{% highlight shell_session %}
 $ git push heroku master
 $ heroku run php artisan migrate
-```
+{% endhighlight %}
 
 #### Open Apps
-```bash
+{% highlight shell_session %}
 $ heroku open
-```
+{% endhighlight %}
 Otomatis `browser` akan membuka aplikasi Heroku,
 Tadaaaaa...... Laravel sudah di Heroku :smiley: :smiley: :smiley:
 

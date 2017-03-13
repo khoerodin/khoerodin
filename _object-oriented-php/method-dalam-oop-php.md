@@ -17,7 +17,8 @@ Semua sifat-sifat *function* bisa diterapkan ke dalam *method*, seperti paramete
 
 Berikut contoh *method*:
 
-```php
+{% highlight php %}
+<?php
 class User {
 	
   // ini method showBio()
@@ -33,6 +34,6 @@ class User {
   }
   
 }
-```
+{% endhighlight %}
 
 Cukup disini tentang *method*, semangat ganss... :muscle: :muscle: :muscle: dan lanjut baca episode selanjutnya ya.

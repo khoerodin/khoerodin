@@ -17,7 +17,8 @@ Dalam _polymorphism_ kita bisa menggunakan _abstract class_ saja atau _interface
  
 Langsung saja kita perhatikan kode di bawah ini, ini adalah contoh _polymorphism_ yang menggunakan _abstract class_ dan _interface_. 
  
-```php 
+{% highlight php %}
+<?php 
 // membuat interface Tanah 
 interface Tanah  
 { 
@@ -83,7 +84,7 @@ echo $tanahAgus->ditanami() . "\n \n";
  
 echo "Tanah Chandra seluas " . $tanahChandra->hitungLuas() . " m2 \n"; 
 echo $tanahChandra->ditanami() . "\n"; 
-``` 
+{% endhighlight %} 
  
 Kita perhatikan, dalam contoh di atas terdapat dua _class_ yaitu `class Lingkaran` dan `class PersegiPanjang`. Dua _class_ tersebut sama-sama turunan dari `abstract class Bibit` dan implementasi `interface Tanah`. Walaupun dari _abstract class_ dan _interface_ yang sama tapi `class Lingkaran` dan `class PersegiPanjang` memiliki fungsi yang berbeda. 
  

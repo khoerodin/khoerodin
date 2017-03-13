@@ -15,7 +15,8 @@ Konsep pewarisan ini sangat berguna jika kita ingin membuat _class_ lagi yang me
 
 Lebih jelasnya mari perhatikan dan praktekkan kode program di bawah ini, keterangan langsung saya sematkan pada baris kode agar memudahkan. :blush:
 
-```php
+{% highlight php %}
+<?php
 class User
 {
     public $name;
@@ -87,6 +88,6 @@ $Bagus->showBio();
 // PHP Notice:  Undefined property.
 // Karena address adalah private
 $Bagus->showAddress();
-```
+{% endhighlight %}
 
 Kita bisa lihat bahwa _class_ `Bio` mewarisi (dapat mengkases) _property_ dan _method_ yang bersifat `public` dan `protected` dari _class_ `User`. Ada yang ditanyakan? jangan sungkan untuk berkomentar sambil ngopi-ngopi.. :smiley: :coffee:

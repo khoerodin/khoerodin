@@ -19,17 +19,19 @@ Cara menggunakan atau memanggil *middleware*, berikut contoh-contohnya:
 ### Individual Route
 Memanggil *middleware* dalam *individual route*
 
-```php
+{% highlight php %}
+<?php
 Route::get('admin', [
     'uses' => 'MyController@index',
     'middleware' => 'new-middleware'
 ]);
-```
+{% endhighlight %}
 
 ### Route Groups
 Memanggil *middleware* dalam *route groups*
 
-```php
+{% highlight php %}
+<?php
 Route::group(['middleware' => 'new-middleware'], function () {
     Route::get('/', function ()    {
         // Uses new-middleware Middleware
@@ -39,12 +41,13 @@ Route::group(['middleware' => 'new-middleware'], function () {
         // Uses new-middleware Middleware
     });
 });
-```
+{% endhighlight %}
 
 ### Controller
 Memanggil *middleware* dalam *controller*. Jika ingin berlaku pada semua *method* dalam *controller*:
 
-```php
+{% highlight php %}
+<?php
 class MyController extends Controller
 {
     function __construct()
@@ -53,11 +56,12 @@ class MyController extends Controller
     }
     ...
 }  
-```
+{% endhighlight %}
 
 Jika hanya ingin pada *method* tertentu saja kita bisa menggunakan `only` dan `except`.
 
-```php
+{% highlight php %}
+<?php
 class MyController extends Controller
 {
     function __construct()
@@ -66,12 +70,13 @@ class MyController extends Controller
         $this->middleware('other-middleware', ['except' => ['baz']]) ; //exclude method
     }
 }
-```
+{% endhighlight %}
 
 ## Membuat Middleware
 Untuk membuat *middleware* baru kita dapat membuat file class baru dalam direktori `/app/Http/Middleware/` misal dengan isi seperti ini
 
-```php
+{% highlight php %}
+<?php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -83,10 +88,11 @@ class NewMiddleware
         // Letakkan kode disini...
     }
 }
-```
+{% endhighlight %}
 Middleware memiliki *method* khusus bernama `handle()` yang memiliki dua parameter yaitu `$request` dan `Closure $next`. Kita lihat contoh sederhana dibawah ini
 
-```php
+{% highlight php %}
+<?php
 public function handle($request, Closure $next)
 {
     $user = Auth::user();
@@ -96,13 +102,14 @@ public function handle($request, Closure $next)
 
     return redirect('home');
 }
-```
+{% endhighlight %}
 Method `handle()` diatas memfilter setiap *request* yang masuk harus berupa `User` dengan *role* sebagai `ROLE_ADMIN`. Jika *request* yang masuk adalah `User::ROLE_ADMIN` maka *request* akan diteruskan  kepada *controller* dengan memanggil *method* `$next($request)`. Tapi apabila bukan `User::ROLE_ADMIN` maka akan di redirect ke `home`.
 
 ## Parameter Middleware
 *Middleware* juga bisa menerima parameter tambahan, seperti contoh dibawah ini, misal untuk memverifikasi bahwa `$request->user()` harus memiliki `$role` tertentu.
 
-```php
+{% highlight php %}
+<?php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -118,14 +125,15 @@ class RoleMiddleware
         return $next($request);
     }
 }
-```
+{% endhighlight %}
 Parameter *middleware* dapat dispesifikan ketika pemanggilannya dalam *route* yaitu dengan memisahkan antara nama *middleware* dan parameter menggunakan `:`, contoh:
 
-```php
+{% highlight php %}
+<?php
 Route::put('post/{id}', ['middleware' => 'role:editor', function ($id) {
     //
 }]);
-```
+{% endhighlight %}
 
 ## Before dan After Middleware
 *Middleware* dalam Laravel dibagi menjadi dua macam; *After Middleware* dan *Before Middleware*. 
@@ -136,7 +144,8 @@ Bagaimana mendefinisikannya, kita lihat perbedaan kode berikut:
 
 ### Before Middleware
 
-```php
+{% highlight php %}
+<?php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -150,10 +159,11 @@ class BeforeMiddleware
         return $next($request)
     }
 }
-```
+{% endhighlight %}
 Contoh penggunaannya
 
-```php
+{% highlight php %}
+<?php
 public function handle($request, Closure $next)
 {
     $user = Auth::user();
@@ -163,12 +173,13 @@ public function handle($request, Closure $next)
 
     return redirect('home');
 }
-```
+{% endhighlight %}
 Jika bukan `ROLE_ADMIN` maka tidak boleh mengaksesnya dan dikembalikan ke `home`.
 
 ### After Middleware
 
-```php
+{% highlight php %}
+<?php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -184,10 +195,11 @@ class AfterMiddleware
         return $response
     }
 }
-```
+{% endhighlight %}
 Contoh penggunaannya
 
-```php
+{% highlight php %}
+<?php
 public function handle($request, Closure $next)
 {
     $response = $next($request);
@@ -202,7 +214,7 @@ public function handle($request, Closure $next)
 
     return $response
 }
-```
+{% endhighlight %}
 
 ## Meregistrasikan Middleware
 *Middleware* belum bisa digunakan sebelum diregistrasikan terlebih dahulu dengan cara-cara sebagai berikut:
@@ -210,27 +222,30 @@ public function handle($request, Closure $next)
 ### Secara Global
 Meregistrasikan secara *global* berarti *middleware* akan selalu dipanggil pada setiap *request* yang masuk, caranya ialah dengan menambahkan kode kedalam array `$middleware` di `app/Http/Kernel.php`. Pahami kode dibawah ini
 
-```php
+{% highlight php %}
+<?php
 protected $middleware = [
     ...
     \App\Http\Middleware\NewMiddleware::class, //New middleware
 ];
-```
+{% endhighlight %}
 
 ### Pada Routes
 Memasang *middleware* pada *route* tertentu bisa juga dilakukan dengan terlebih dahulu meregistrasikannya kedalam array `$routeMiddleware` di `app/Http/Kernel.php`.
 
-```php
+{% highlight php %}
+<?php
 protected $routeMiddleware = [
     ...
     'new-middlware' => \App\Http\Middleware\NewMiddleware::class, //New middleware
 ];
-```
+{% endhighlight %}
 
 ### Dengan Mengelompokkan (Middleware Groups)
 Bagaimana jika satu *route* membutuhkan banyak *middleware*? kan repot memanggil banyak *middleware* sekaligus. Solusinya ialah diregistrasikan menggunakan *Middleware Groups*. Menggunakan *Middleware Groups* kita bisa mengelompokkan beberapa *middleware* menjadi satu sehingga memudahkan dalam penggunaanya sebagaimana *individual middleware*. Kita buka `app/Http/Kernel.php` lihat pada array `$middlewareGroups`
 
-```php
+{% highlight php %}
+<?php
 protected $middlewareGroups = [
     'web' => [
         \App\Http\Middleware\EncryptCookies::class,
@@ -244,7 +259,7 @@ protected $middlewareGroups = [
         'throttle:60,1',
     ],
 ];
-```
+{% endhighlight %}
 Berdasarkan kode diatas, secara default Laravel memiliki dua buah middleware group yaitu `web` dan `api`. 
 
 Middleware group `web` didalamnya mengandung beberapa middleware sekaligus yaitu `EncryptCookies`, `AddQueuedCookiesToResponse`, `StartSession`, `ShareErrorsFromSession` dan `VerifyCsrfToken` sehingga kita tidak usah repot-repot memanggil middleware tersebut satu persatu tetapi cukup dengan menggunakan *key* dari middleware group yaitu `web`.
@@ -258,7 +273,8 @@ Adakalanya kita tetap butuh sebuah aksi ketika *response* telah diberikan kepada
 
 *Terminable middleware* menggunakan *method* bernama `terminate()` dan akan tetap dieksekusi meskipun terdapat *Before Midleware* yang gagal. Misalnya untuk pencatatan *log* seperti contoh sederhana dibawah ini
 
-```php
+{% highlight php %}
+<?php
 public function handle($request, Closure $next)
 {
     $user = Auth::user();
@@ -273,5 +289,5 @@ public function terminate($request, $response)
 {
     //Tulis kode untuk aksi pencatatan log disini
 }
-```
+{% endhighlight %}
 Method `terminate()` akan tetap dieksekusi meskipun `User` bukan `ROLE_ADMIN`

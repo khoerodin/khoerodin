@@ -6,11 +6,9 @@ layout: compress
 
   {% include head.html %}
 
-  <body class="fade-in">
+  <body data-senna data-senna-surface>
+	<div class="senna-loading-bar"></div>
     {{ content }}    
-    {% include bottom_scripts.html %}
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-		{% include google_analytics.html %}
-	{% endif %}
+    {% include bottom_scripts.html %}    
   </body>
 </html>

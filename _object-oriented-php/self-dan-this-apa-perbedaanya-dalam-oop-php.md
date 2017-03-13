@@ -15,7 +15,8 @@ Jika sudah faham artikel saya tentang <a href="{{ site.url }}/object-oriented-ph
 
 ### 1. Penggunaan `$this`
 
-```php
+{% highlight php %}
+<?php
 class Penulis {
 
     public function saya() {
@@ -37,7 +38,7 @@ class Programmer extends Penulis {
 
 $TukangKode = new Programmer();
 $TukangKode->sayaAdalah();
-```
+{% endhighlight %}
 
 Jika kode di atas dijalankan maka outputnya `Saya programmer :)`.
 
@@ -49,7 +50,8 @@ Karena menggunakan `$this` ini berarti yang dimaksud `saya()` <mark>bukanlah</ma
 
 ### 2. Penggunaan `self`
 
-```php
+{% highlight php %}
+<?php
 class Penulis {
 
     public function saya() {
@@ -71,7 +73,7 @@ class Programmer extends Penulis {
 
 $TukangKode = new Programmer();
 $TukangKode->sayaAdalah();
-```
+{% endhighlight %}
 
 Jika kode di atas dijalankan maka outputnya `Saya penulis :)`.
 

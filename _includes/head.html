@@ -12,6 +12,9 @@
 	{% include seo_meta.html %}
 	
 	<script src="{{ site.url }}/assets/js/scripts.min.js"></script>
+	{% if jekyll.environment == 'production' and site.google_analytics %}
+		{% include google_analytics.html %}
+	{% endif %}
 	{% include top_scripts.html %}
 	
 </head>

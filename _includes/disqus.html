@@ -12,7 +12,8 @@
 	function disqus() {
 
 	  if (!disqus_loaded)  {
-	    disqus_loaded = true;    
+	    disqus_loaded = true;
+	    
 	    var disqus_shortname = '{{ site.disqus }}';
 	    var disqus_developer = 0;
 	    (function() {
@@ -20,6 +21,7 @@
 	      dsq.src = 'https://'+disqus_shortname+'.disqus.com/embed.js';
 	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	    })();
+
 	  }
 	  
 	}

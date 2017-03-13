@@ -2,7 +2,7 @@
 title: "HTML Tag, Attribute dan Element"
 clean_title: "HTML Tag, Attribute dan Element"
 date: '2017-03-11 21:50:00'
-description: Menggunakan HTML, HyperText Markup Language> kita jadi lebih mudah mendeskripsikan struktur halaman website, seperti kepala halaman, paragraf, gambar dan lain-lain. Sedangkan menggunakan CSS, Cascading Style Sheets kita bisa memberikan style atau mendekorasi sebuah halaman website seperti pemilihan warna, jenis font dan lain-lain.
+description: Menggunakan HTML, HyperText Markup Language kita jadi lebih mudah mendeskripsikan struktur halaman website, seperti kepala halaman, paragraf, gambar dan lain-lain. Sedangkan menggunakan CSS, Cascading Style Sheets kita bisa memberikan style atau mendekorasi sebuah halaman website seperti pemilihan warna, jenis font dan lain-lain.
 layout: episode
 published: true
 ---
