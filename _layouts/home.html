@@ -33,7 +33,7 @@ layout: default
       </a>
       <div class="meta">
 
-        {% assign episodes = site.[col.label] %}
+        {% assign episodes = site[col.label] %}
         {% for eps in episodes %}            
           {% if eps.title == post.title %}
             {% assign episode = forloop.index %}

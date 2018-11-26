@@ -26,7 +26,7 @@ layout: default
 
     {% assign label = page.permalink | replace: '/', '' %} 
     {% assign col = site.collections | where: "label", label | first %}
-    {% assign series = site.[col.label] %}
+    {% assign series = site[col.label] %}
 
     {% for post in series %}
     <div class="col-9-l">

@@ -13,7 +13,7 @@ facebook            : khoerodin
 linkedin            : khoerodin
 
 google_analytics    : 'UA-91739383-1'
-disqus              : 'khoerodin'
+disqus              : 'khoerod  in'
 
 markdown            : kramdown
 
@@ -70,7 +70,7 @@ pagination:
   enabled: true
 
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-last-modified-at
   - jekyll-archives

@@ -21,7 +21,7 @@ layout: default
         <h1 class="title" itemprop="headline">{{ page.clean_title }}</h1>
         <div class="meta">
           
-          {% assign episodes = site.[col.label] %}
+          {% assign episodes = site[col.label] %}
           {% for eps in episodes %}            
             {% if eps.title == page.title %}
               {% assign episode = forloop.index %}

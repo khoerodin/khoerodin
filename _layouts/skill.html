@@ -11,7 +11,7 @@ layout: default
 
 {% assign all_episode = 0 %}
 {% for series in series %}
-  {% assign episodes = site.[series.label] %}
+  {% assign episodes = site[series.label] %}
   {% assign episodes_size = episodes | size %}
   {% capture all_episode %}{{ all_episode | plus: episodes_size }}{% endcapture %}
 {% endfor %}
@@ -39,7 +39,7 @@ layout: default
           <span class="text-primary">{{ series.level | capitalize | escape }}</span>
           <span class="vertical-devider"></span>
 
-          {% assign episodes = site.[series.label] %}
+          {% assign episodes = site[series.label] %}
           {{ episodes.size }} Episode
         </div>
         
