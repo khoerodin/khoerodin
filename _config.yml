@@ -13,7 +13,7 @@ facebook            : khoerodin
 linkedin            : khoerodin
 
 google_analytics    : 'UA-91739383-1'
-disqus              : 'khoerod  in'
+disqus              : 'khoerodin'
 
 markdown            : kramdown
 
@@ -76,7 +76,7 @@ plugins:
   - jekyll-archives
   - jekyll-paginate-v2
   - jemoji
-  
+
 exclude:
   - README.md
   - Gemfile.lock
