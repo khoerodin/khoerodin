@@ -13,7 +13,7 @@ Suatu hal yang tidak efisien ialah ketika akan akan menggunakan banyak class _pr
 
 Mulai PHP 5 masalah itu sudah bisa diatasi dengan mudah. Misal kita membuat sebuah _class_ `Name` dan disimpan dalam _file_ `Name.php`:
 
-{% highlight php %}
+```php
 <?php
 class Name {
 
@@ -23,11 +23,11 @@ class Name {
     }
 
 }
-{% endhighlight %}
+```
 
 Buat lagi _class_ yaitu _class_ `Address` dan disimpan dalam _file_ `Address.php`.
 
-{% highlight php %}
+```php
 <?php
 class Address {
 
@@ -35,13 +35,13 @@ class Address {
     {
     	echo 'Alamat saya ' . $address;
     }
-    
+
 }
-{% endhighlight %}
+```
 
 Selanjutnya kita panggil dua buah _class_ tersebut dalam satu _file_ `index.php`
 
-{% highlight php %}
+```php
 <?php
 include 'Name.php';
 $name = new Name();
@@ -50,11 +50,11 @@ $name->showName('Khoerodin');
 include 'Address.php';
 $address = new Address();
 $address->showAddress('Ciamis');
-{% endhighlight %}
+```
 
 Jika kode diatas dijalankan maka akan menghasilkan output `Nama saya Khoerodin Alamat saya Ciamis`. Kode tersebut benar alias tidak ada yang salah, namun seperti yang saya tulis di awal, bagaimana jika *class*nya puluhan bahkan ratusan? tentu akan merepotkan. Kita ubah `index.php` jadi seperti ini:
 
-{% highlight php %}
+```php
 <?php
 spl_autoload_register(function ($class) {
     include $class . '.php';
@@ -65,7 +65,7 @@ $name->showName('Khoerodin');
 
 $address = new Address();
 $address->showAddress('Ciamis');
-{% endhighlight %}
+```
 
 Coba jalankan kode tersebut. Ya inilah solusinya, kita tidak usah repot-repot meng-*include* satu per satu _file class_ yang dibutuhkan karena akan repot jika _class_ yang dibutuhkan tidak sedikit. Dengan ini PHP otomatis akan memanggil/melakukan `include` ketika `new Class()` dideklarasikan.
 

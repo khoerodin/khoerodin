@@ -1,7 +1,7 @@
-const gulp   = require('gulp'); 
+const gulp   = require('gulp');
 
-const concat = require('gulp-concat');  
-const rename = require('gulp-rename');  
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 
 const autoprefixer 	= require('gulp-autoprefixer');
@@ -10,7 +10,7 @@ const concatCss 	= require('gulp-concat-css');
 
 const browserSync = require('browser-sync');
 
-gulp.task('scripts', function() {  
+gulp.task('scripts', function() {
     return gulp.src(
     		[
                 '_assets/js/vendor/jquery_min.js',
@@ -24,10 +24,10 @@ gulp.task('scripts', function() {
 });
 
 //styles paths
-var cssFiles = '_assets/css/*.css',  
+var cssFiles = '_assets/css/*.css',
     cssDest = 'assets/css';
 
-gulp.task('styles', function() {  
+gulp.task('styles', function() {
     return gulp.src(cssFiles)
 	    .pipe(autoprefixer('last 2 version'))
 	    .pipe(concatCss('styles.min.css'))
@@ -36,7 +36,7 @@ gulp.task('styles', function() {
 });
 
 // Gulp Default Task
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('default', gulp.series('scripts', 'styles'));
 
 gulp.task('browse', function() {
   browserSync({

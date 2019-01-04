@@ -1663,7 +1663,8 @@ pre {
 
 pre code {
   overflow-wrap: normal;
-  white-space: pre; }
+  white-space: pre;
+  padding: 1px !important; }
 
 body {
   animation: fadeIn ease 1s;

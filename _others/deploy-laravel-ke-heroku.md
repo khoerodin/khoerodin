@@ -32,37 +32,37 @@ Sebelum dimulai, pastikan Anda telah memahami:
 
 Buat *project* Laravel seperti biasa
 
-{% highlight shell_session %}
+```shell_session
 $ laravel new herovel
 ...
 $ cd herovel
-{% endhighlight %}
+```
 
 #### Initialize Git
 
-{% highlight shell_session %}
+```shell_session
 $ git init
 $ git add .
 $ git commit -m "initial commit laravel to heroku"
-{% endhighlight %}
+```
 
 #### Membuat Procfile
 
-{% highlight shell_session %}
+```shell_session
 $ echo web: vendor/bin/heroku-php-apache2 public/ > Procfile
 $ git add .
 $ git commit -m "procfile for heroku"
-{% endhighlight %}
+```
 
 #### Create Heroku Apps
 
-{% highlight shell_session %}
+```shell_session
 $ heroku create
-{% endhighlight %}
+```
 
 #### Install Database Addons
 
-{% highlight shell_session %}
+```shell_session
 // Jika menggunakan PostgreSQL
 $ heroku addons:create heroku-postgresql:hobby-dev
 
@@ -71,9 +71,9 @@ $ heroku config:get DATABASE_URL
 
 // Maka akan muncul URL database dengan format:
 // postgres://username:password@host:port/database_name
-{% endhighlight %}
+```
 
-{% highlight shell_session %}
+```shell_session
 // Jika menggunakan MySQL
 $ heroku addons:create cleardb:ignite
 
@@ -82,18 +82,18 @@ $ heroku config:get CLEARDB_DATABASE_URL
 
 // Maka akan muncul URL database dengan format:
 // mysql://username:password@host/database_name?reconnect=true
-{% endhighlight %}`
+````
 
 #### Set ENV variables
 
 Set *.env variables* sesuai kebutuhan Anda:
 
-{% highlight shell_session %}
+```shell_session
 // DB_CONNECTION ganti sesuai dengan yang Anda pakai
-// DB_HOST, DB_PORT, DB_DATABASE, 
-// DB_USERNAME dan DB_PASSWORD 
+// DB_HOST, DB_PORT, DB_DATABASE,
+// DB_USERNAME dan DB_PASSWORD
 // diambil dari URL database yang didapatkan ketika install database addons
-// APP_LOG= errorlog : disarankan Heroku agar logging tidak ke laravel storage 
+// APP_LOG= errorlog : disarankan Heroku agar logging tidak ke laravel storage
 // tapi ke Heroku
 // Heroku juga merekomendasikan Trusting the Load Balancer :
 // https://devcenter.heroku.com/articles/getting-started-with-laravel#trusting-the-load-balancer
@@ -109,19 +109,19 @@ DB_PORT=port \
 DB_DATABASE=database_name \
 DB_USERNAME=username \
 DB_PASSWORD=password
-{% endhighlight %}
+```
 
 #### Push to Heroku and Migrate
 
-{% highlight shell_session %}
+```shell_session
 $ git push heroku master
 $ heroku run php artisan migrate
-{% endhighlight %}
+```
 
 #### Open Apps
-{% highlight shell_session %}
+```shell_session
 $ heroku open
-{% endhighlight %}
+```
 Otomatis `browser` akan membuka aplikasi Heroku,
 Tadaaaaa...... Laravel sudah di Heroku :smiley: :smiley: :smiley:
 
