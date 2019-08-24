@@ -23,7 +23,12 @@ gulp.task("scripts", function() {
 
 gulp.task("styles", function() {
   return gulp
-    .src("_assets/css/*.css")
+    .src([
+      "_assets/css/fonts.css",
+      "_assets/css/styles.css",
+      "_assets/css/icons.css",
+      "_assets/css/senna.css"
+    ])
     .pipe(autoprefixer("last 2 version"))
     .pipe(concatCss("styles.min.css"))
     .pipe(cleanCss())
