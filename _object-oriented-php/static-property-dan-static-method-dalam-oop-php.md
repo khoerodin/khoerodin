@@ -5,8 +5,6 @@ date: '2017-02-13 19:00:00'
 description: Static property dan static method adalah property dan method yang langsung dapat diakses dari class tanpa instansiasi class (pembuatan object) terlebih dahulu. Cara mendeklarasikannya yaitu property atau method diawali menggunakan keyword static.
 layout: episode
 published: true
-redirect_from:
-  - /static-property-dan-static-method-dalam-oop-php/
 ---
 
 _Static property_ dan _static method_ adalah _property_ dan _method_ yang langsung dapat diakses dari _class_ tanpa _instansiasi class_ (pembuatan _object_) terlebih dahulu. Cara mendeklarasikannya yaitu _property_ atau _method_ diawali menggunakan keyword `static`.

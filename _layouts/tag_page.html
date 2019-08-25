@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% include logo_with_nav.html %}
+
+<div class="container container-l pad-top-30">  
+  
+  <div class="clear home-featured-content">
+
+    {% for post in page.posts  %}
+    <div class="col-9-l pad-bottom-30">
+
+      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
+        <h3 class="pad-top-7">
+          {{ post.title }}
+        </h3>
+      </a>
+
+      <div class="meta">
+        {% include content_meta.html %}
+      </div>
+
+      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
+        <div class="snippet-content">
+          {{ post.content | strip_html | truncatewords:25 }}
+        </div>
+      </a>
+
+    </div>
+    {% endfor %}
+    
+  </div>
+</div>
+
+<footer class="horizontal-menu">
+  {% include footer.html %}
+</footer>

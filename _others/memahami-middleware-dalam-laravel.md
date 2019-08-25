@@ -5,8 +5,6 @@ description: >-
   Middleware Laravel adalah penengah antara request yang masuk dengan Controller yang dituju yang berpengaruh pada request dan respons. Misalnya kita ingin memverifikasi setiap request yang masuk seperti melakukan pengecekan status login, privillage, CSRF (Cross-Site Request Forgery) atau yang lainnya.
 published: true
 layout: post
-redirect_from:
-  - /memahami-middleware-dalam-laravel/
 ---
 
 *Middleware* Laravel adalah penengah antara *request* yang masuk dengan *controller* yang dituju yang berpengaruh pada *request* dan *respons*. Misalnya kita ingin memverifikasi setiap *request* yang masuk seperti melakukan pengecekan status *login, privillage, CSRF (Cross-Site Request Forgery)* atau yang lainnya.
