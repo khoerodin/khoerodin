@@ -7,59 +7,56 @@ layout: default
   
   <div class="clear home-featured-content">
 
-    <div class="col-12-l pad-bottom-25">
-      <h2>Featured <i class="icon ion-ios-arrow-right"></i></h2>
-    </div>
-    
-    {% assign oop_php = site.object-oriented-php | sample:4 %}
-    {% for post in oop_php %}
-    
-    {% if forloop.index == 1%}    
-      <div class="col-9-l pad-bottom-30">
-    {% else %}
-      <div class="col-4-l  pad-bottom-30">
-    {% endif %}    
+    {% for post in paginator.posts  %}
+    <div class="col-9-l pad-bottom-30">
 
-      {% assign col = site.collections | where: "label", post.collection | first %}
-
-
-      <h5>
-        <a href="{{ site.url }}/{{ post.collection }}" class="link-mute">
-        {{ col.title }}:
-        </a>
-      </h5>
-      <a href="{{ site.url }}{{ post.url }}" class="link-mute">
-        <h3>{{ post.clean_title }}</h3>
+      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
+        <h3 class="pad-top-7">
+          {{ post.title }}
+        </h3>
       </a>
+
       <div class="meta">
 
-        {% assign episodes = site[col.label] %}
-        {% for eps in episodes %}            
-          {% if eps.title == post.title %}
-            {% assign episode = forloop.index %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
+        {% if post.tags.size > 0 %}
 
-        <a class="link-primary" href="{{ site.url }}/{{ post.collection }}">Episode {{ episode }}</a>
-        <span class="vertical-devider"></span>
+          {% for tag in post.tags %}
+            <a class="link-primary" href="{{ site.url }}/tag/{{ tag }}">#{{ tag }}</a>{% if forloop.last != true %},{% endif %}
+          {% endfor %}            
+
+          <span class="vertical-devider"></span>
+        {% endif %}
         {% include content_meta.html %}
-      </div>
-      <a href="{{ site.url }}{{ post.url }}" class="link-mute">
-        <div class="snippet-content">
-          {% if forloop.index == 1%}    
-            {{ post.content | strip_html | truncatewords:45 }}
-          {% else %}
-            {{ post.content | strip_html | truncatewords:15 }}
-          {% endif %}          
-        </div>
-      </a>       
-    </div>
 
+      </div>
+
+      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
+        <div class="snippet-content">
+          {{ post.content | strip_html | truncatewords:25 }}
+        </div>
+      </a>
+
+    </div>
     {% endfor %}
 
-  </div>
+    
+    {% if paginator.total_pages > 1 %}
+      <div class="col-9-l pad-bottom-30 paginator">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <i class="icon ion-ios-arrow-left"></i> Kembali
+          </a>
+        {% endif %}
 
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            Lanjut <i class="icon ion-ios-arrow-right"></i>
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+    
+  </div>
 </div>
 
 <footer class="horizontal-menu">

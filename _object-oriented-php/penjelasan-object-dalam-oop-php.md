@@ -5,8 +5,6 @@ date: '2017-02-10 15:30:00'
 description: Object adalah hasil konkrit atau hasil cetakan dari sebuah class. Sebagai contoh pada artikel sebelumnya saya telah membuat class User maka object-nya adalah para User atau account
 layout: episode
 published: true
-redirect_from:
-  - /penjelasan-object-dalam-oop-php/
 ---
 
 <mark><em>Object</em></mark> adalah hasil konkrit atau *hasil cetakan* dari sebuah <mark>class</mark>. Sebagai contoh pada artikel sebelumnya saya telah membuat *class* `User` maka *object*-nya adalah para *User* atau *accounts*, misalnya *Andre*, *Andi* dan *Bagus*.

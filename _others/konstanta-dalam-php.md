@@ -4,8 +4,6 @@ date: '2017-02-09 14:12:00'
 description: Konstanta adalah suatu lokasi penyimpanan (dalam memory) yang berisikan nilai yang sifatnya tetap dan tidak bisa diubah sepanjang program berjalan.
 published: true
 layout: post
-redirect_from:
-  - /konstanta-dalam-php/
 ---
 
 Dalam artikel ini kita akan belajar tentang konstanta. Dalam <a href="https://en.wikipedia.org/wiki/Constant_(computer_programming)" target="_blank">Wikipedia</a> dijelaskan Konstanta *(constant)* adalah suatu lokasi penyimpanan (dalam *memory*) yang berisikan nilai yang sifatnya tetap dan tidak bisa diubah sepanjang program berjalan. 

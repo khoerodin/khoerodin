@@ -1,43 +1,44 @@
-title               : 'Khoerodin'
-description         : 'Website-blog yang ditulis Khoerodin, seorang web developer dengan pengalaman lebih dari 3 tahun. Website ini memuat materi web-development mulai dari dasar sampai tahap deployment ke server.'
-short_description   : 'Web Developer, Writer and Maker'
-lang                : id
-email               : khoerodin@live.com
-author              :
-  khoerodin         :
-    twitter         : khoerodin
-    facebook        : khoerodin
+title: Khoerodin
+description: >- # this means to ignore newlines until "short_description:"
+  Website-blog yang ditulis Khoerodin, seorang Rails Web Developer.
+short_description: Web Developer, Writer and Maker
+lang: id
+email: khoerodin@live.com
+author:
+  khoerodin:
+    twitter: khoerodin
+    facebook: khoerodin
 
-twitter             : khoerodin
-facebook            : khoerodin
-linkedin            : khoerodin
+twitter: khoerodin
+facebook: khoerodin
+linkedin: khoerodin
 
-google_analytics    : 'UA-91739383-1'
-disqus              : 'khoerodin'
+google_analytics: UA-91739383-1
+disqus: khoerodin
 
-markdown            : kramdown
+markdown: kramdown
 
 # https://github.com/oncleben31/jekyll-date-basic-i18n
-date_format         : '%-d %B %Y'
+date_format: '%-d %B %Y'
 
 # Details for the RSS feed generator
-url                 : 'https://khoerodin.id'
-permalink           : /blog/:title/
+url: https://khoerodin.id
+permalink: /:title/
 
 collections:
   object-oriented-php:
     output: true
     permalink: /object-oriented-php/:path/
-    label: 'object-oriented-php' # dipake di home, dan skill page
-    title: 'Object-Oriented PHP' # dipake di home, dan skill page
+    label: object-oriented-php # dipake di home, dan skill page
+    title: Object-Oriented PHP # dipake di home, dan skill page
     skill: php #dipake di home, dan skill page
     level: intermediate #dipake di skill page
 
   html-css:
     output: true
     permalink: /html-css/:path/
-    label: 'html-css' # dipake di home, dan skill page
-    title: 'HTML & CSS' # dipake di home, dan skill page
+    label: html-css # dipake di home, dan skill page
+    title: HTML & CSS # dipake di home, dan skill page
     skill: layouting #dipake di home, dan skill page
     level: beginner #dipake di skill page
 
@@ -46,32 +47,27 @@ collections:
     permalink: /others/:path/
 
 defaults:
-    -
-      scope:
-        path: ""
-        type: pages
-      values:
-        layout: default
-    -
-      scope:
-        path: ""
-        type: posts
-      values:
-        layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # jekyll-archives
 jekyll-archives:
   enabled: ['tags']
-  layout: 'tagar'
-  permalinks:
-    tag: '/blog/tagar/:name/'
+  layout: tag_page
 
 pagination:
   enabled: true
-
+  per_page: 1
 
 plugins:
-  - jekyll-redirect-from
   - jekyll-last-modified-at
   - jekyll-archives
   - jekyll-paginate-v2
@@ -84,4 +80,5 @@ exclude:
   - gulpfile.js
   - package.json
   - todo-tugas.todo
-  - node_modules
+  - node_modules/
+  - .jekyll-cache/

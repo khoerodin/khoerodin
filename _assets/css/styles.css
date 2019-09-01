@@ -2266,18 +2266,6 @@ article img:not(.emojione) {
   text-decoration: none;
 }
 
-.home-featured-content h2.tags,
-.home-featured-content h2.tags a {
-  font-weight: 400;
-  color: #a3adbb;
-  text-decoration: none;
-}
-
-.home-featured-content h2.tags a.active,
-.home-featured-content h2.tags a:hover {
-  color: #78869a;
-}
-
 .side-icons {
   font-size: 26px;
   font-size: 1.625rem;
@@ -2318,6 +2306,13 @@ footer.horizontal-menu {
 
 footer .nav-item {
   padding-right: 15px;
+}
+
+.paginator a {
+  color: #42b549;
+  font-size: 13px;
+  font-size: .8125rem;
+  text-decoration: none;
 }
 
 /**

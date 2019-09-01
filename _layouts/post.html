@@ -17,9 +17,9 @@ layout: default
             {% assign tags = page.tags %}
             {% for tag in tags %}            
               {% if forloop.last == true %}
-                <a class="link-primary" href="{{ site.url }}/blog/tagar/{{ tag }}">#{{ tag }}</a>
+                <a class="link-primary" href="{{ site.url }}/tag/{{ tag }}">#{{ tag }}</a>
               {% else %}
-                <a class="link-primary" href="{{ site.url }}/blog/tagar/{{ tag }}">#{{ tag }}</a>,
+                <a class="link-primary" href="{{ site.url }}/tag/{{ tag }}">#{{ tag }}</a>,
               {% endif %}
             {% endfor %}            
 

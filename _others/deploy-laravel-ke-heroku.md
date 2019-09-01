@@ -5,8 +5,6 @@ description: >-
   Langkah mudah deploy/install Laravel ke Heroku. Heroku merupakan layanan cloud computing bertype PaaS (Platform as a Service). Bagi para web developer lumayan lah versi gratisnya kalau hanya untuk sekedar demo aplikasi/website yang sedang dibangun.
 published: true
 layout: post
-redirect_from:
-  - /deploy-laravel-ke-heroku/
 ---
 
 **Heroku** merupakan _layanan cloud computing_ bertype <a href="https://rizkimufrizal.github.io/heroku-sebagai-komputasi-modern/" target="_blank">PaaS</a> _(Platform as a Service)_. Bagi para *web developer* lumayan lah versi gratisnya kalau hanya untuk sekedar *demo* aplikasi/*website* yang sedang dibangun.
