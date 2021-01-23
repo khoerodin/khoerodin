@@ -1,11 +1,7 @@
 {% if page.comments != false and site.disqus and jekyll.environment == "production" %}
 <script>
 	window.onscroll = function(e) {
-    if ((window.innerHeight + window.scrollY) 
-        >= document.body.offsetHeight) 
-    {
-        if (!disqus_loaded) disqus(); 
-    }
+	  disqus();
 	};
 
 	var disqus_loaded = false;

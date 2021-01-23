@@ -11,9 +11,9 @@ layout: default
     <div class="col-9-l pad-bottom-30">
 
       <a href="{{ site.url }}{{ post.url}}" class="link-mute">
-        <h3 class="pad-top-7">
+        <h4 class="pad-top-7">
           {{ post.title }}
-        </h3>
+        </h4>
       </a>
 
       <div class="meta">
@@ -29,13 +29,6 @@ layout: default
         {% include content_meta.html %}
 
       </div>
-
-      <a href="{{ site.url }}{{ post.url}}" class="link-mute">
-        <div class="snippet-content">
-          {{ post.content | strip_html | truncatewords:25 }}
-        </div>
-      </a>
-
     </div>
     {% endfor %}
 
