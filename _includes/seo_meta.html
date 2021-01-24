@@ -1,4 +1,4 @@
-{% if page.url == '/' %}
+{% if page.url == '/index.html' %}
 	{% assign title = site.title | strip_html | append: ' — ' | append: site.short_description | markdownify | strip_html %}
 {% elsif page.title %}
 	{% assign title = page.title | strip_html | append: ' — ' | append: site.title | markdownify | strip_html %}
@@ -6,7 +6,7 @@
 	{% assign title = site.title | strip_html | append: ' — ' | append: site.short_description | markdownify | strip_html %}
 {% endif %}
 
-{% if page.url == '/' %}
+{% if page.url == '/index.html' %}
 	{% assign description = site.description | markdownify | strip_html %}
 {% elsif page.description %}
 	{% assign description = page.description | markdownify | strip_html %}
