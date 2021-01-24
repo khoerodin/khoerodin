@@ -7,7 +7,7 @@ task :s do
   execute("gulp && jekyll serve --watch --config _config.yml,_config_dev.yml")
 end
 
-desc 'Jekyll Build'
-task :build do
-  execute("gulp && JEKYLL_ENV=production jekyll build")
+desc 'Deploy to Surge'
+task :deploy do
+  execute("gulp && JEKYLL_ENV=production jekyll build && surge")
 end
