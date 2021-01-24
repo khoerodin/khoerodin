@@ -4,7 +4,7 @@
     <div class="clear pad-top-10 pad-bottom-7">
       <div class="col-12-l">
         <div class="header-logo pad-bottom-10">
-          <a href="{% if page.url == '/' %}javascript:void(0){% else %}{{ site.url }}{% endif %}" class="logo">khoe<span class="text-grey">rodin</span></a>
+          <a href="{% if page.url == '/index.html' %}javascript:void(0){% else %}{{ site.url }}{% endif %}" class="logo">khoe<span class="text-grey">rodin</span></a>
         </div>        
       </div>
     </div>
@@ -17,8 +17,8 @@
 
           <nav class='vertical-align-middle'>
             <span class='nav-item'><a 
-              class="{% if page.url == '/' %}active{% endif %}"
-              href="{% if page.url == '/' %}javascript:void(0){% else %}{{ site.url }}{% endif %}">Home</a>
+              class="{% if page.url == '/index.html' %}active{% endif %}"
+              href="{% if page.url == '/index.html' %}javascript:void(0){% else %}{{ site.url }}{% endif %}">Home</a>
             </span>
 
             {% for tag in site.tags %}
