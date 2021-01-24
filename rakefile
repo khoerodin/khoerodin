@@ -4,10 +4,10 @@ end
 
 desc 'Jekyll Serve'
 task :s do
-  execute("jekyll serve --watch --config _config.yml,_config_dev.yml")
+  execute("gulp && jekyll serve --watch --config _config.yml,_config_dev.yml")
 end
 
 desc 'Jekyll Build'
 task :build do
-  execute("JEKYLL_ENV=production jekyll build")
+  execute("gulp && JEKYLL_ENV=production jekyll build")
 end

@@ -35,7 +35,7 @@ $(document).ready(function() {
 // get current URL
 var currentURL =
   window.location.protocol +
-  "/" +
+  "//" +
   window.location.host +
   window.location.pathname;
 
@@ -68,7 +68,7 @@ $(document).on("click", ".share-to-tw", function(e) {
     title = $(".parent-title a").text() + " " + $(".title").text();
     tweetUrl =
       "https://twitter.com/intent/tweet/?text=" +
-      title +
+      title.trim() +
       "&url=" +
       encodeURI(currentURL);
     windowPopup(tweetUrl, 500, 300);
