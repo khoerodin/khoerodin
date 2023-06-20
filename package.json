@@ -3,7 +3,6 @@
   "version": "3.0.0",
   "description": "Khoerodin cool personal site",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
