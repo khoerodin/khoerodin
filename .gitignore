@@ -5,3 +5,4 @@ assets/js/
 .sass-cache/
 .DS_Store
 .jekyll-cache
+/.idea
