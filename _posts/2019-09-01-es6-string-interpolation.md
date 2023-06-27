@@ -1,7 +1,7 @@
 ---
 title: ES6 String Interpolation
 date: 2019-09-01 15:50:00 +07:00
-description: ES6 String Interpolation 
+description: ES6 String Interpolation
 layout: post
 tags: es6 javascript
 ---
@@ -10,7 +10,7 @@ Jika sudah terbiasa dengan Ruby, sangat mudah sekali melakukan interpolasi strin
 ```ruby
 middle_name = 'Salwa'
 "Hi, my name is #{middle_name}!"
-``` 
+```
 
 Sedangkan untuk javascript seperti ini:
 ```javascript

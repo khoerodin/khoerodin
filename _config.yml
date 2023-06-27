@@ -1,84 +1,26 @@
 title: Khoerodin
-description: >- # this means to ignore newlines until "short_description:"
-  Website-blog yang ditulis Khoerodin, seorang Rails Web Developer.
-short_description: Web Developer, Writer and Maker
-lang: id
-email: khoerodin@live.com
-author:
-  khoerodin:
-    twitter: khoerodin
-    facebook: khoerodin
-
-twitter: khoerodin
-facebook: khoerodin
-linkedin: khoerodin
-
-google_analytics: UA-91739383-1
-disqus: khoerodin
-
-markdown: kramdown
-
-# https://github.com/oncleben31/jekyll-date-basic-i18n
-date_format: '%-d %B %Y'
-
-# Details for the RSS feed generator
+tagline: Developer, writer, and maker
+description: Passionate Ruby on Rails web developer since 2018 based in Indonesia, specializing in robust applications. Thrives on pushing boundaries, delivering high-quality code and seamless user experiences. Let's create something exceptional together.
 url: https://khoerodin.id
-permalink: /:title/
+permalink: /:title
 
-collections:
-  object-oriented-php:
-    output: true
-    permalink: /object-oriented-php/:path/
-    label: object-oriented-php # dipake di home, dan skill page
-    title: Object-Oriented PHP # dipake di home, dan skill page
-    skill: php #dipake di home, dan skill page
-    level: intermediate #dipake di skill page
-
-  html-css:
-    output: true
-    permalink: /html-css/:path/
-    label: html-css # dipake di home, dan skill page
-    title: HTML & CSS # dipake di home, dan skill page
-    skill: layouting #dipake di home, dan skill page
-    level: beginner #dipake di skill page
-
-  others:
-    output: true
-    permalink: /others/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: default
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-
-# jekyll-archives
-jekyll-archives:
-  enabled: ['tags']
-  layout: tag_page
-
-pagination:
-  enabled: true
-  per_page: 10
+author:
+  name: Khoerodin
+  url: https://khoerodin.id
+  email: khoerodin@live.com
+  twitter: khoerodin
 
 plugins:
-  - jekyll-last-modified-at
-  - jekyll-archives
-  - jekyll-paginate-v2
-  - jemoji
+  - jekyll-redirect-from
+
+theme: jekyll-theme-productive
+google_analytics: UA-91739383-1
 
 exclude:
-  - README.md
-  - Gemfile.lock
+  - .editorconfig
+  - .git
+  - .jekyll-cache
   - Gemfile
-  - gulpfile.js
-  - package.json
-  - todo-tugas.todo
-  - node_modules/
-  - .jekyll-cache/
+  - Gemfile.lock
+  - LICENSE
+  - README.md
