@@ -3,7 +3,7 @@ title: Class dan Property dalam OOP PHP - Ep. 2
 date: 2017-02-02 17:30:00 +07:00
 description: Class adalah blueprint dari object. Class digunakan sebagai kerangka dasar atau cetakan yang menyimpan property dan method, dan yang akan kita pakai adalah hasil cetakan tersebut yaitu object
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/class-dan-property-dalam-oop-php
 ---
 
@@ -46,4 +46,4 @@ class User {
     private $address;
 }
 {% endhighlight %}
-terus itu *visibility keyword* dalam property untuk apa? sabar..... akan dibahas dalam artikel tersendiri kok, pokoknya baca saja artikel <a href="/tag/SeriOOPPHP">#SeriOOPPHP ini</a> urut sesuai episodenya ya 😄
+terus itu *visibility keyword* dalam property untuk apa? sabar..... akan dibahas dalam artikel tersendiri kok, pokoknya baca saja artikel <a href="/tag/serioopphp">#serioopphp ini</a> urut sesuai episodenya ya 😄

@@ -3,7 +3,7 @@ title: Class Autoloader dalam OOP PHP - Ep. 7
 date: 2017-02-12 21:00:00 +07:00
 description: Apa itu Autoloader Class dalam OOP PHP ? Suatu hal yang tidak efisien ialah ketika akan akan menggunakan banyak class programmer membuat setiap _class_ dalam satu file tersendiri dan jika akan menggunakannya programmer meng-include-kan satu per satu file class pada permulaan baris kode. Ini bukan masalah jika hanya melakukan include satu, dua atau lima file, tapi jika puluhan? ratusan bahkan lebih?
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/class-autoloader-dalam-oop-php
 ---
 

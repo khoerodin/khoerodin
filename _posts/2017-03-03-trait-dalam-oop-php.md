@@ -3,7 +3,7 @@ title: Trait dalam OOP PHP - Ep. 15
 date: 2017-03-03 10:50:00 +07:00
 description: Trait adalah suatu mekanisme dimana suatu class diizinkan untuk menggunakan kembali kode program (code reuse) yang berasal dari hirarki yang berbeda. Mari kita perhatikan contoh di bawah ini, saya buat tiga buah class agar lebih mudah untuk difahami.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/trait-dalam-oop-php
 ---
 

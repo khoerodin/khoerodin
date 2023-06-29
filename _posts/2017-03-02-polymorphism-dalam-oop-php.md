@@ -3,7 +3,7 @@ title: Polymorphism dalam OOP PHP - Ep. 14
 date: 2017-03-02 09:45:00 +07:00
 description: Polymorphism adalah gambaran pola dalam object-oriented programming di mana banyak class memiliki fungsi yang berbeda ketika menggunakan interface dan atau abstract class yang sama.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/polymorphism-dalam-oop-php
 ---
 

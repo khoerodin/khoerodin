@@ -3,7 +3,7 @@ title: Konstanta Class dalam OOP PHP - Ep. 5
 date: 2017-02-12 08:06:00 +07:00
 description: Konstanta Class atau Class Constants adalah konstanta yang didefinisikan di dalam sebuah class. Sebagaimana konstanta regular konstanta class juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/konstanta-class-dalam-oop-php
 ---
 

@@ -3,7 +3,7 @@ title: Method dalam OOP PHP - Ep. 3
 date: 2017-02-09 19:00:00 +07:00
 description: Method adalah tindakan atau aksi dari suatu class. Ketika membuat function di luar class/object maka disebut function, namun ketika membuat function di dalam class/object maka disebut method
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/method-dalam-oop-php
 ---
 

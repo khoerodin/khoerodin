@@ -3,7 +3,7 @@ title: Penjelasan Object dalam OOP PHP - Ep. 4
 date: 2017-02-10 15:30:00 +07:00
 description: Object adalah hasil konkrit atau hasil cetakan dari sebuah class. Sebagai contoh pada artikel sebelumnya saya telah membuat class User maka object-nya adalah para User atau account
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/penjelasan-object-dalam-oop-php
 ---
 

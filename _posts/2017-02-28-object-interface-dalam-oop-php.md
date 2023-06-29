@@ -3,7 +3,7 @@ title: Object Interface dalam OOP PHP - Ep. 13
 date: 2017-02-28 22:00:00 +07:00
 description: Object Interface adalah template untuk class dimana semua method di dalamnya harus diimplementasikan ulang oleh class yang memakainya ( mengimplementasikannya)
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/object-interface-dalam-oop-php
 ---
 

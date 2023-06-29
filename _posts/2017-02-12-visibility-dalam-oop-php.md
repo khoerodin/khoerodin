@@ -3,7 +3,7 @@ title: Visibility dalam OOP PHP - Ep. 6
 date: 2017-02-12 15:25:00 +07:00
 description: Property, Method dan Konstanta dapat dikontrol aksesnya menggunakan visibility keyword. Terdapat tiga keyword yaitu public, protected dan private. Dalam literatur lain ini umum juga disebut dengan istilah enkapsulasi atau encapsulation.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/visibility-dalam-oop-php
 ---
 
@@ -155,4 +155,4 @@ $Khoerodin::PRIVATE_CONSTANT;
 $Khoerodin->showAll();
 {% endhighlight %}
 
-Demikian pembahasan tentang _visibility_ dalam <a href="/tag/SeriOOPPHP">Object-Oriented PHP</a> atau yang biasa disebut dengan <em>encapsulation</em>.
+Demikian pembahasan tentang _visibility_ dalam <a href="/tag/serioopphp">Object-Oriented PHP</a> atau yang biasa disebut dengan <em>encapsulation</em>.

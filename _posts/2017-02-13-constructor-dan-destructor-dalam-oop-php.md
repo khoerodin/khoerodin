@@ -3,7 +3,7 @@ title: Constructor dan Destructor dalam OOP PHP - Ep. 8
 date: 2017-02-13 07:40:00 +07:00
 description: Apa itu Constructor dan Destructor dalam OOP PHP ? PHP menyediakan method khusus yang berjalan ketika sebuah object mulai dibuat dan dimatikan, yaitu method __construct() yang disebut constructor dan method __destruct() yang disebut destructor
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/constructor-dan-destructor-dalam-oop-php
 ---
 

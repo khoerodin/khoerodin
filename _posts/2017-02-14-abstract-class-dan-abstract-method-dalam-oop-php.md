@@ -3,7 +3,7 @@ title: Abstract Class dan Abstract Method dalam OOP PHP - Ep. 12
 date: 2017-02-14 23:02:00 +07:00
 description: Abstract class adalah class yang mengandung minimal satu buah abstract method, yaitu method yang hanya berupa nama method dan argumennya (jika ada) dan diawali dengan keyword abstract.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/abstract-class-dan-abstract-method-dalam-oop-php
 ---
 

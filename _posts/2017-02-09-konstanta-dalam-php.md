@@ -59,4 +59,4 @@ PHP sendiri juga telah membawa konstanta bawaaan atau *Predefined Constants* ata
 
 Lebih lengkapnya bisa dibuka di *website* resmi PHP <a href="http://php.net/manual/en/reserved.constants.php" target="_blank">disini</a>.
 
-Sampai disini dulu ya... :grin:
+Sampai disini dulu ya...

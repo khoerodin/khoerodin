@@ -3,7 +3,7 @@ title: Pewarisan (Obejct Inheritance) dalam OOP PHP - Ep. 9
 date: 2017-02-13 10:08:00 +07:00
 description: Pewarisan atau inheritance dalam Object-Oriented PHP adalah mewariskan property dan method baik public maupun protected kepada class lain. Ingat ya, hanya public dan protected.
 layout: post
-tags: SeriOOPPHP php
+tags: serioopphp php
 redirect_from: /object-oriented-php/pewarisan-object-inheritance-dalam-oop-php
 ---
 

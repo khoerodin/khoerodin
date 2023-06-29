@@ -80,4 +80,4 @@ $ ruby -v
 ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
 ```
 
-Demikian, lebih lengkapnya ada di [Brightbox](https://www.brightbox.com/docs/ruby/ubuntu/ "Brightbox"). Semoga berkah manfaat dan *Happy Coding* :blush: :coffee:
+Demikian, lebih lengkapnya ada di [Brightbox](https://www.brightbox.com/docs/ruby/ubuntu/ "Brightbox"). Semoga berkah manfaat dan *Happy Coding*
