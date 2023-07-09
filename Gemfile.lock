@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:khoerodin/productive.git
-  revision: 853735bf94cda03e0063e7bd243c3b88db85dd7e
+  revision: fef2084837c2758827534b1aca25cf1cfbfe7af2
   specs:
     jekyll-theme-productive (0.1.0)
       jekyll (~> 4.3.2)
