@@ -1,13 +1,15 @@
 GIT
   remote: git@github.com:khoerodin/productive.git
-  revision: fef2084837c2758827534b1aca25cf1cfbfe7af2
+  revision: b95c43c9710d7556ea329a7eff6d16a8bbac2f9d
+  tag: v0.1.5
   specs:
-    jekyll-theme-productive (0.1.0)
+    jekyll-theme-productive (0.1.5)
       jekyll (~> 4.3.2)
       jekyll-admin (~> 0.11.1)
       jekyll-archives (~> 2.2)
+      jekyll-date-localization (~> 0.0.6)
       jekyll-minifier (~> 0.1.10)
-      jekyll-paginate (~> 1.1)
+      jekyll-paginate-v2 (~> 3.0)
       jekyll-seo-tag (~> 2.8)
       jekyll-sitemap (~> 1.4)
       jekyll-turbolinks (~> 0.0.6)
@@ -54,13 +56,16 @@ GEM
       sinatra-contrib (>= 1.4)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
+    jekyll-date-localization (0.0.6)
+      i18n (~> 1.0)
     jekyll-minifier (0.1.10)
       cssminify2 (~> 2.0)
       htmlcompressor (~> 0.4)
       jekyll (>= 3.5)
       json-minify (~> 0.0.3)
       uglifier (~> 4.1)
-    jekyll-paginate (1.1.0)
+    jekyll-paginate-v2 (3.0.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
@@ -91,7 +96,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (5.0.1)
+    public_suffix (5.0.3)
     rack (2.2.7)
     rack-protection (3.0.6)
       rack

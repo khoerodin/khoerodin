@@ -4,10 +4,12 @@ date: 2017-02-02 17:30:00 +07:00
 description: Class adalah blueprint dari object. Class digunakan sebagai kerangka dasar atau cetakan yang menyimpan property dan method, dan yang akan kita pakai adalah hasil cetakan tersebut yaitu object
 layout: post
 tags: serioopphp php
-redirect_from: /object-oriented-php/class-dan-property-dalam-oop-php
+redirect_from:
+  - /object-oriented-php/class-dan-property-dalam-oop-php
+  - /class-dan-property-dalam-oop-php
 ---
 
-Setelah dalam [artikel sebelumnya]({% post_url 2017-02-09-apa-itu-oop-object-oriented-programming %}) membahas apa itu OOP, kali ini akan coba saya jelaskan apa itu *Class* dan *Property*.
+Setelah dalam [artikel sebelumnya]({% post_url id/2017-02-09-apa-itu-oop-object-oriented-programming %}) membahas apa itu OOP, kali ini akan coba saya jelaskan apa itu *Class* dan *Property*.
 
 ## 1. Class
 Simplenya *class* adalah *blueprint* dari *object*. *Class* digunakan sebagai kerangka dasar atau cetakan yang menyimpan *property* dan *method*, dan yang akan kita pakai adalah hasil cetakan tersebut yaitu *object*.

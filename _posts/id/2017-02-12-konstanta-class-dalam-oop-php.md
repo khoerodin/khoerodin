@@ -4,10 +4,12 @@ date: 2017-02-12 08:06:00 +07:00
 description: Konstanta Class atau Class Constants adalah konstanta yang didefinisikan di dalam sebuah class. Sebagaimana konstanta regular konstanta class juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan.
 layout: post
 tags: serioopphp php
-redirect_from: /object-oriented-php/konstanta-class-dalam-oop-php
+redirect_from:
+  - /object-oriented-php/konstanta-class-dalam-oop-php
+  - /konstanta-class-dalam-oop-php
 ---
 
-Konstanta _Class_ atau _Class Constants_ adalah konstanta yang didefinisikan di dalam sebuah _class_. Sebagaimana [konstanta regular]({% post_url 2017-02-09-konstanta-dalam-php %}), konstanta _class_ juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan. Nilai atau *value* dari konstanta harus berupa ekspresi *konstan* atau ekspresi tetap yaitu bukan merupakan variable_, _property_ atau _function_ dan lain-lain.
+Konstanta _Class_ atau _Class Constants_ adalah konstanta yang didefinisikan di dalam sebuah _class_. Sebagaimana [konstanta regular]({% post_url id/2017-02-09-konstanta-dalam-php %}), konstanta _class_ juga berisi nilai tetap dan tidak bisa diubah sepanjang program berjalan. Nilai atau *value* dari konstanta harus berupa ekspresi *konstan* atau ekspresi tetap yaitu bukan merupakan variable_, _property_ atau _function_ dan lain-lain.
 
 ## Mendefinisikan Konstanta Class
 Caa mendefinisikan Konstanta _Class_ yaitu diawali dengan menggunakan *keyword* `const`. Berikut contoh konstanta dalam sebuah _class_
@@ -112,4 +114,4 @@ echo User::PENDIDIKAN;
 
 Jika kode diatas dijalankan pasti akan error, karena `const PENDIDIKAN` adalah _private_.
 
-Apa sih *Visibility Modifier* ? akan kita pelajari di artikel [Visibility dalam OOP PHP]({% post_url 2017-02-12-visibility-dalam-oop-php %})
+Apa sih *Visibility Modifier* ? akan kita pelajari di artikel [Visibility dalam OOP PHP]({% post_url id/2017-02-12-visibility-dalam-oop-php %})

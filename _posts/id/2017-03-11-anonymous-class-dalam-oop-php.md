@@ -4,7 +4,9 @@ date: 2017-03-11 06:25:00 +07:00
 description: Seperti namanya Anonymous Class adalah class anonim alias tanpa nama. Anonymous class sangat berguna jika kita mendadak membutuhkan object sederhana tanpa ingin ribet didahului pembuatan regular class seperti biasanya. Anonymous class mulai diperkenalkan oleh PHP 7.0, kita perhatikan contoh ini, keterangan saya sisipkan dalam baris kode
 layout: post
 tags: serioopphp php
-redirect_from: /object-oriented-php/anonymous-class-dalam-oop-php
+redirect_from:
+  - /object-oriented-php/anonymous-class-dalam-oop-php
+  - /anonymous-class-dalam-oop-php
 ---
 
 Seperti namanya _Anonymous Class_ adalah class anonim alias tanpa nama. _Anonymous class_ sangat berguna jika kita mendadak membutuhkan _object_ sederhana tanpa ingin ribet didahului pembuatan _regular class_ seperti biasanya.

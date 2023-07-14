@@ -4,7 +4,9 @@ date: 2017-02-28 22:00:00 +07:00
 description: Object Interface adalah template untuk class dimana semua method di dalamnya harus diimplementasikan ulang oleh class yang memakainya ( mengimplementasikannya)
 layout: post
 tags: serioopphp php
-redirect_from: /object-oriented-php/object-interface-dalam-oop-php
+redirect_from:
+  - /object-oriented-php/object-interface-dalam-oop-php
+  - /object-interface-dalam-oop-php
 ---
 
 **Object Interface** adalah _template_ untuk _class_ dimana semua _method_ di dalamnya harus diimplementasikan ulang oleh _class_ yang memakainya ( mengimplementasikannya).

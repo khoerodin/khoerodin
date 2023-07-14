@@ -1,13 +1,13 @@
 title: Khoerodin
-tagline: Developer, writer, and maker
-description: Passionate Ruby on Rails web developer since 2018 based in Indonesia, specializing in robust applications. Thrives on pushing boundaries, delivering high-quality code and seamless user experiences. Let's create something exceptional together.
 url: https://khoerodin.id
 permalink: /:title
 
 author:
   name: Khoerodin
   url: https://khoerodin.id
+  domain: khoerodin.id
   email: khoerodin@live.com
+  github: khoerodin
   twitter: khoerodin
 
 plugins:
@@ -15,6 +15,32 @@ plugins:
 
 theme: jekyll-theme-productive
 google_analytics: UA-91739383-1
+
+defaults:
+  - values:
+      locale: en
+
+  # posts
+  - scope:
+      path: _posts/id/**
+      type: posts
+    values:
+      locale: id
+      permalink: /id/:title
+
+  # static pages
+  - scope:
+      path: _pages/id/**
+      type: pages # collection named "pages"
+    values:
+      locale: id
+      permalink: /id/:title
+
+# for _pages folder
+collections:
+  pages:
+    output: true
+    permalink: /:title
 
 exclude:
   - .editorconfig

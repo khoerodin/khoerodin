@@ -4,7 +4,9 @@ date: 2017-02-10 15:30:00 +07:00
 description: Object adalah hasil konkrit atau hasil cetakan dari sebuah class. Sebagai contoh pada artikel sebelumnya saya telah membuat class User maka object-nya adalah para User atau account
 layout: post
 tags: serioopphp php
-redirect_from: /object-oriented-php/penjelasan-object-dalam-oop-php
+redirect_from:
+  - /object-oriented-php/penjelasan-object-dalam-oop-php
+  - /penjelasan-object-dalam-oop-php
 ---
 
 _Object_ adalah hasil konkrit atau hasil cetakan dari sebuah _class_. Sebagai contoh pada artikel sebelumnya saya telah membuat _class_ `User` maka _object_-nya adalah *para User* atau *accounts*, misalnya *Andre*, *Andi* dan *Bagus*.
