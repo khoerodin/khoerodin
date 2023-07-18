@@ -1,13 +1,7 @@
 en:
   site_tagline: Developer, writer, and maker
   site_description: I am Ruby on Rails developer. Currently I am curious about Ruby on Rails, Vanilla JavaScript, Hotwire, StimulusReflex, Mrujs, and CableReady
-  lang_switch: Indonesian
-  older: Older
-  newer: Newer
 
 id:
   site_tagline: Developer, writer, and maker
   site_description: Saya seorang Ruby on Rails developer yang antusias dengan Vanilla JavaScript, Hotwire, StimulusReflex, Mrujs dan CableReady
-  lang_switch: Inggris
-  older: Lama
-  newer: Baru

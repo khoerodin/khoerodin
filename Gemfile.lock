@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:khoerodin/productive.git
-  revision: b95c43c9710d7556ea329a7eff6d16a8bbac2f9d
-  tag: v0.1.5
+  revision: 9b5ade2fcd016ae0739799f7c8913d8a9db4324c
+  tag: v0.1.7
   specs:
-    jekyll-theme-productive (0.1.5)
+    jekyll-theme-productive (0.1.7)
       jekyll (~> 4.3.2)
       jekyll-admin (~> 0.11.1)
       jekyll-archives (~> 2.2)
