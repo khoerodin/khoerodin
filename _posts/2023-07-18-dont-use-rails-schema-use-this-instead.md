@@ -23,7 +23,7 @@ Running `rails db:setup` is the quickest solution to both (or more) of these pro
 But what if the database has complex logic that is not captured in `schema.rb`? The solution is to use `structure.sql`
 
 ## Advantages of `structure.sql`
-The advantage of using `structure.sql` is that it will copy the structure of the database exactly, including functions, views, constraints, storage procedures, etc., which is not possible with `schema.rb`.
+The advantage of using `structure.sql` is that it will copy the structure of the database exactly, including functions, views, constraints, stored procedures, etc., which is not possible with `schema.rb`.
 
 ## Switch from `schema.rb` to `structure.sql`
 

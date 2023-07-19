@@ -24,7 +24,7 @@ Tapi bagaimana jika database memiliki *logic* yang kompleks yang tidak ter-*capt
 
 ## Kelebihan `structure.sql`
 
-Kelebihan `structure.sql` ialah akan meng-*copy* struktur database dengan sama persis termasuk *function*, *views*, *constraint,* *store procedure* dan lain-lain dimana hal ini tidak bisa didapatkan jika menggunakan `schema.rb`
+Kelebihan `structure.sql` ialah akan meng-*copy* struktur database dengan sama persis termasuk *function*, *views*, *constraint,* *stored procedure* dan lain-lain dimana hal ini tidak bisa didapatkan jika menggunakan `schema.rb`
 
 ## Beralih dari `schema.rb` ke `structure.sql`
 
