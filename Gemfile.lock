@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:khoerodin/productive.git
-  revision: 97e3238cb69e28909e3b8a0b6dc0fa65d1dcb993
-  tag: v0.1.8
+  revision: faec03d48dbdc2fdd3a1168a1d3e2d1e8694d11c
+  tag: v0.1.9
   specs:
-    jekyll-theme-productive (0.1.8)
+    jekyll-theme-productive (0.1.9)
       jekyll (~> 4.3.3)
       jekyll-admin (~> 0.11.1)
       jekyll-archives (~> 2.2)
@@ -12,6 +12,7 @@ GIT
       jekyll-paginate-v2 (~> 3.0)
       jekyll-seo-tag (~> 2.8)
       jekyll-sitemap (~> 1.4)
+      rackup (~> 2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -196,7 +197,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll-redirect-from (~> 0.16.0)
   jekyll-theme-productive!
-  rackup
 
 RUBY VERSION
    ruby 3.2.3p157
