@@ -1,5 +1,5 @@
 ---
-title: Utilizing Fixtures for Smooth Development
+title: Utilizing Rails Fixtures for Smooth Development
 date: 2024-03-28 06:13:00 +07:00
 description: Discover how fixtures in Ruby on Rails development can simplify your workflow. Learn how to load pre-defined data sets into your development database effortlessly. Keep your development environment tidy with a clean slate feature
 layout: post
@@ -7,7 +7,7 @@ tags: rails ruby sql
 uid: utilizing-fixtures-for-smooth-development
 ---
 
-Using fixtures in your development environment can significantly simplify your Ruby on Rails workflow. Essentially, fixtures are pre-defined data that you can load into your development environment to mimic real-world scenarios. This not only saves time but also ensures consistency in your testing and development processes.
+Using rails fixtures in your development environment can significantly simplify your Ruby on Rails workflow. Essentially, fixtures are pre-defined data that you can load into your development environment to mimic real-world scenarios. This not only saves time but also ensures consistency in your testing and development processes.
 
 So, how do you go about using fixtures in Rails? Well, it's pretty straightforward. You just need to tweak the contents of your `db/seeds.rb` file. By configuring it properly, running `bin/rails db:seed` will essentially reset your database with the data from your fixtures. It's like hitting the reset button and starting fresh with your predefined data.
 
