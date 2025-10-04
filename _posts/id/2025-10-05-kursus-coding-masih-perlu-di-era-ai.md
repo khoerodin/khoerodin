@@ -1,7 +1,10 @@
 ---
 title: "Kursus Coding: Masih Perlu di Era AI?"
 date: 2025-10-05
-categories: [ai, edukasi, coding]
+description: "Dengan berkembangnya AI, cara belajar coding berubah total. Kini berlangganan AI bisa menggantikan kursus mahal dengan kurikulum personal yang lebih dinamis dan interaktif langsung dari terminal."
+layout: post
+tags: ai course coding
+uid: can-ai-replace-your-coding-course
 ---
 
 Dengan berkembangnya AI, cara kita belajar coding pun ikut berubah. Dalam sebuah postingan di media sosial, saya membahas bahwa kini, berlangganan AI bisa jadi membuat kita tidak perlu lagi ikut kursus coding. Cukup minta AI untuk membuatkan kurikulum belajar yang sesuai kebutuhan.
