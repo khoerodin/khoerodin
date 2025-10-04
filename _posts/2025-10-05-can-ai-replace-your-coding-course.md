@@ -1,6 +1,6 @@
 ---
 title: Can AI Replace Your Coding Course?
-date: 2025-10-05
+date: 2025-10-05 06:30:00 +07:00
 description: "Discover how AI is transforming coding education. Learn why AI subscription services might replace expensive courses with personalized, interactive curriculums you can access directly from your terminal."
 layout: post
 tags: ai course coding

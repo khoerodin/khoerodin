@@ -1,6 +1,6 @@
 ---
 title: "Kursus Coding: Masih Perlu di Era AI?"
-date: 2025-10-05
+date: 2025-10-05 06:30:00 +07:00
 description: "Dengan berkembangnya AI, cara belajar coding berubah total. Kini berlangganan AI bisa menggantikan kursus mahal dengan kurikulum personal yang lebih dinamis dan interaktif langsung dari terminal."
 layout: post
 tags: ai course coding
